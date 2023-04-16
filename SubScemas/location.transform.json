@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "title": "location.transform",
+    "data format": "json",
+    "schema version": "00",
+    "type": "ojbect",
+    "properties": [
+        {
+            "name": "vec3",
+            "type": "array",
+            "items": {
+                "type": "float"
+            }
+        },
+        {
+            "name": "rotation",
+            "type": "float"
+        },
+        {
+            "name": "scale3d",
+            "type": "float"
+        }
+    ]
+}
