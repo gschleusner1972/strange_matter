@@ -98,6 +98,7 @@ class SchemaCreator(tk.Frame):
                 "$schema": "http://json-schema.org/schema#",
                 "title": schema_name,
                 "data format": schema_data,
+                "parentclass":"WIP",
                 "schema version":"00",
                 "type": "ojbect",
                 "properties": valid_fields

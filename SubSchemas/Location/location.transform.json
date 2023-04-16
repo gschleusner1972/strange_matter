@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "title": "location.transform",
+    "data format": "json",
+    "primary class": "Object Component",
+    "parentclass": "WIP",
+    "schema version": "00",
+    "type": "object",
+    "properties": [
+        {
+            "name": "vec3",
+            "type": "array",
+            "items": {
+                "type": "float",
+                "enum": "not working yet...."
+            }
+        },
+        {
+            "name": "rotation",
+            "type": "float"
+        },
+        {
+            "name": "scale3d",
+            "type": "float"
+        }
+    ]
+}
