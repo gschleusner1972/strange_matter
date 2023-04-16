@@ -20,8 +20,8 @@ class SchemaCreator(tk.Frame):
         self.primary_class_label.pack(pady=10)
 
         self.primary_class = tk.StringVar()
-        self.primary_class.set("Object Component")
-        self.primary_class_combobox = tk.OptionMenu(self, self.primary_class, "Object Component", "Relationship Component")
+        self.primary_class.set("Component")
+        self.primary_class_combobox = tk.OptionMenu(self, self.primary_class, "Component", "Relationship")
         self.primary_class_combobox.config(bg="dark blue", fg="pink")
         self.primary_class_combobox["menu"].config(bg="dark blue", fg="pink")
         self.primary_class_combobox.pack(pady=5)
@@ -93,17 +93,18 @@ class SchemaCreator(tk.Frame):
         schema_folder = self.schema_folder.get()
         schema_data = self.schema_data.get()
 
+
         with open(os.path.join(schema_folder, schema_name + ".json"), "w") as f:
             valid_fields = []
             for field_name, field_type in self.fields:
                 if field_name.get():
                     if field_type.get() == "array":
                         valid_fields.append({
-                            "name": field_name.get(),
-                            "type": "array",
-                            "items": {
-                                "type": self.array_type.get(),
-                                "enum": "not working yet...."
+                                "name": field_name.get(),
+                                "type": "array",
+                                "items": {
+                                    "type": self.array_type.get(),
+                                    "enum": "wip"
                             }
                         })
                     else:
@@ -113,12 +114,11 @@ class SchemaCreator(tk.Frame):
                         })
 
             json.dump({
-                "$schema": "http://json-schema.org/schema#",
+                "$schema":"http://json-schema.org/schema#",
                 "title": schema_name,
-                "data format": schema_data,
-                "primary class": self.primary_class.get(),
-                "parentclass": "WIP",
-                "schema version": "00",
+                "data_format": schema_data,
+                "primary_class": self.primary_class.get(),
+                "schema_version": "00",
                 "type": "object",
                 "properties": valid_fields
             }, f, indent=4)
