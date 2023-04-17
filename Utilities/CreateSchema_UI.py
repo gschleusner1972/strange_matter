@@ -41,6 +41,12 @@ class SchemaCreator(tk.Frame):
         self.browse_button = tk.Button(self, text="Browse", command=self.browse_folder, bg="dark blue", fg="pink")
         self.browse_button.pack(pady=10)
 
+        self.enums_data_label = tk.Label(self, text="Enums", bg="dark blue", fg="pink")
+        self.enums_data_label.pack(pady=10)
+
+        self.enums_data = tk.Entry(self)
+        self.enums_data.pack(pady=5)
+
         self.fields = []
         for i in range(0, 10):
             field = tk.Frame(self, bg="dark blue")
@@ -92,7 +98,7 @@ class SchemaCreator(tk.Frame):
         schema_name = self.schema_name.get()
         schema_folder = self.schema_folder.get()
         schema_data = self.schema_data.get()
-
+        myenum_data = self.enums_data.get()
 
         with open(os.path.join(schema_folder, schema_name + ".json"), "w") as f:
             valid_fields = []
@@ -104,14 +110,33 @@ class SchemaCreator(tk.Frame):
                                 "type": "array",
                                 "items": {
                                     "type": self.array_type.get(),
-                                    "enum": "wip"
                             }
                         })
+
+                    if field_name.get() == "compound":
+                        valid_fields.append({  
+                                "dimensions": {
+                                    "type": "object",
+                                    "properties": {
+                                        "length": {
+                                        "type": "number"
+                                        },
+                                        "width": {
+                                        "type": "number"
+                                        },
+                                        "height": {
+                                        "type": "number"
+                                        }
+                                    },
+                                    }
+                        })
+      
                     else:
                         valid_fields.append({
                             "name": field_name.get(),
                             "type": field_type.get()
                         })
+
 
             json.dump({
                 "$schema":"http://json-schema.org/schema#",
