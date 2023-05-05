@@ -1,0 +1,22 @@
+[
+	{
+		"component_version" : "00001",
+		"entity_guid" : "2XO9sNxaf0tBWBWE4fj0DI",
+		"component_guid" : "0013ad8d-067f-4407-8b7b-383399396a36",
+		"name" : "Water Glass:Water Glass:9730",
+		"context" : "hok.com/projects/123...",
+		"author" : "hok",
+		"source_data" : "C:\\+HOK\\OneDrive - HOK\\Downloads 677\\Sample_ECS_IFC.ifc",
+		"source_data_id" : "8b5414eb-5afc-46a4-a8a1-071eae9dde50",
+		"component_type" : "classification",
+		"component_type_reference" : "https://buildingsmart.com/componentifc5010",
+		"version" : "0",
+		"status" : "WIP",
+		"active" : "1",
+		"author_software" : "Revit 2024",
+		"hash1" : "9a062451-8826-4468-825f-09026f135107",
+		"payload_data_type" : "json",
+		"date_created" : "20230505140633.299334",
+		"classification" : "BuildingElementProxy"
+	}
+]

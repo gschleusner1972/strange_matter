@@ -1,0 +1,22 @@
+[
+	{
+		"component_version" : "00001",
+		"entity_guid" : "3o5x6W2EXLgWynzp6poG3Q",
+		"component_guid" : "d6b7aa22-d1d9-4fed-8287-7ab7a1e01e66",
+		"name" : "Port_4598_1",
+		"context" : "hok.com/projects/123...",
+		"author" : "hok",
+		"source_data" : "C:\\+HOK\\OneDrive - HOK\\Downloads 677\\Sample_ECS_IFC.ifc",
+		"source_data_id" : "510713a5-af2a-45b7-865a-6fecf0f325ad",
+		"component_type" : "classification",
+		"component_type_reference" : "https://buildingsmart.com/componentifc5010",
+		"version" : "1",
+		"status" : "WIP",
+		"active" : "1",
+		"author_software" : "Revit 2024",
+		"hash1" : "1196d8af-07c0-47de-8317-b3b01bbe22c2",
+		"payload_data_type" : "json",
+		"date_created" : "20230505140633.2155906",
+		"classification" : "DistributionPort"
+	}
+]

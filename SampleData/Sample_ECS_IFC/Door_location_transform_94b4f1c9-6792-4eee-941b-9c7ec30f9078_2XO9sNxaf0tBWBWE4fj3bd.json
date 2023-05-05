@@ -1,0 +1,24 @@
+[
+	{
+		"component_version" : "00001",
+		"entity_guid" : "2XO9sNxaf0tBWBWE4fj3bd",
+		"component_guid" : "94b4f1c9-6792-4eee-941b-9c7ec30f9078",
+		"name" : "Single-Flush:800 x 2100:7223",
+		"context" : "hok.com/projects/123...",
+		"author" : "hok",
+		"source_data" : "C:\\+HOK\\OneDrive - HOK\\Downloads 677\\Sample_ECS_IFC.ifc",
+		"source_data_id" : "e90179b6-390a-4913-80ff-295e3f1c5fda",
+		"component_type" : "Location",
+		"component_type_reference" : "https://buildingsmart.com/componentifc5010",
+		"version" : "4",
+		"status" : "WIP",
+		"active" : "1",
+		"author_software" : "Revit 2024",
+		"hash1" : "bebd78b5-bfba-4acb-9a9c-ced674b4fedc",
+		"payload_data_type" : "json",
+		"date_created" : "20230505140633.2705545",
+		"_x" : 1437.6695842450554,
+		"_y" : -450.5689277899553,
+		"_z" : 2179.999999999999
+	}
+]

@@ -1,0 +1,24 @@
+[
+	{
+		"component_version" : "00001",
+		"entity_guid" : "2XO9sNxaf0tBWBWE4fj2Y0",
+		"component_guid" : "067daeb4-cb22-4189-94b7-d8d46d3e5052",
+		"name" : "Basic Wall:Interior - Partition:3536",
+		"context" : "hok.com/projects/123...",
+		"author" : "hok",
+		"source_data" : "C:\\+HOK\\OneDrive - HOK\\Downloads 677\\Sample_ECS_IFC.ifc",
+		"source_data_id" : "0cfca909-e388-4a87-8e44-3e2bf49dfe8d",
+		"component_type" : "Location",
+		"component_type_reference" : "https://buildingsmart.com/componentifc5010",
+		"version" : "1",
+		"status" : "WIP",
+		"active" : "1",
+		"author_software" : "Revit 2024",
+		"hash1" : "ecdff710-5403-4bb3-b218-c5031bc320fd",
+		"payload_data_type" : "json",
+		"date_created" : "20230505140633.4044468",
+		"_x" : 3482.6695842450767,
+		"_y" : 623.3761525965742,
+		"_z" : 2080.0000000000005
+	}
+]
