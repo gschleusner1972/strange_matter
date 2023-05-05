@@ -1,7 +1,7 @@
-__component__,component,component_version:str,entity_guid:str,component_guid:str,context:str,authur:str,authro_id:str,component_type:str,component_type_reference:str,version:str,status:str,active:bool,authur_software:str,hash1:str,payload_data_type:str,date_created:str
-component,relationship,source_entities:list,source_components:list,source_component_type:str,destination_entities:list,destination_components:list,destination_component_type:str,relationship_name:str,,,,,,,,
-component,location_transform,vec3:list,rotation:float,scale3d:list,,,,,,,,,,,,
-component,person_details,first:str,last:str,email:str,,,,,,,,,,,,
-component,project_details,name:str,number:str,alias:str,,,,,,,,,,,,
-component,project_group,name:str,group_type:str,,,,,,,,,,,,,
-component,service_group,name:str,service_name:str,service_group_function:str,,,,,,,,,,,,
+__component__,component,component_version:str,entity_guid:str,component_guid:str,name:str,context:str,authur:str,sourcedata:str,sourcedata_id,component_type:str,component_type_reference:str,version:str,status:str,active:bool,authur_software:str,hash1:str,payload_data_type:str,date_created:str
+component,relationship,source_entities:list,source_components:list,source_component_type:str,destination_entities:list,destination_components:list,destination_component_type:str,relationship_name:str,,,,,,,,,,
+component,location_transform,vec3:list,rotation:float,scale3d:list,,,,,,,,,,,,,,
+component,person_details,first:str,last:str,email:str,,,,,,,,,,,,,,
+component,project_details,name:str,number:str,alias:str,,,,,,,,,,,,,,
+component,project_group,name:str,group_type:str,,,,,,,,,,,,,,,
+component,service_group,name:str,service_name:str,service_group_function:str,,,,,,,,,,,,,,
