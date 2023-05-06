@@ -1,14 +1,14 @@
 import csv
 
 # Define the output file name
-OUTPUT_FILE_NAME = "classes.py"
+OUTPUT_FILE_NAME = "container_classes.py"
 
 # Function to remove data types from arguments for "self.<arg> = <arg>" statements
 def remove_data_type(arg):
     return arg.split(':')[0].strip()
 
 # Read the CSV file
-with open('input.csv') as csv_file:
+with open('container.csv') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     # Get the parent class details from the first row
     parent_class_row = next(csv_reader)
