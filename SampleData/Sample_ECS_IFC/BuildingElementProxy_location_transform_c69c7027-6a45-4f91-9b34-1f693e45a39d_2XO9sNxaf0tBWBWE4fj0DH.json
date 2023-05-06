@@ -1,0 +1,24 @@
+[
+	{
+		"component_version" : "00001",
+		"entity_guid" : "2XO9sNxaf0tBWBWE4fj0DH",
+		"component_guid" : "c69c7027-6a45-4f91-9b34-1f693e45a39d",
+		"name" : "White Porcelain Plate:Fine China - Plate:9729",
+		"context" : "hok.com/projects/123...",
+		"author" : "hok",
+		"source_data" : "C:\\+HOK\\OneDrive - HOK\\Downloads 677\\Sample_ECS_IFC.ifc",
+		"source_data_id" : "46d9bd28-8439-4ac7-aa18-94d72e57ebc9",
+		"component_type" : "Location",
+		"component_type_reference" : "https://buildingsmart.com/componentifc5010",
+		"version" : "2",
+		"status" : "WIP",
+		"active" : "1",
+		"author_software" : "Revit 2024",
+		"hash1" : "52939a40-5522-4aa9-9d3e-1fee58bbb76d",
+		"payload_data_type" : "json",
+		"date_created" : "20230506111145.0548369",
+		"_x" : 1759.455879105661,
+		"_y" : 1443.3952597129207,
+		"_z" : 756.1107242774173
+	}
+]

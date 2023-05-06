@@ -1,0 +1,32 @@
+[
+	{
+		"component_version" : "00001",
+		"entity_guid" : "1Cn$3jXq7CO_Zbm3Dje3S$",
+		"component_guid" : "8c08c05b-5341-4b6a-b873-92fbad753218",
+		"name" : "Port_4095_1",
+		"context" : "hok.com/projects/123...",
+		"author" : "hok",
+		"source_data" : "C:\\+HOK\\OneDrive - HOK\\Downloads 677\\Sample_ECS_IFC.ifc",
+		"source_data_id" : "6fe9353c-7501-46e0-8d1d-102faaa1a44c",
+		"component_type" : "Pset_All",
+		"component_type_reference" : "https://buildingsmart.com/componentifc5010",
+		"version" : "0",
+		"status" : "WIP",
+		"active" : "1",
+		"author_software" : "Revit 2024",
+		"hash1" : "f2ffaf41-9f14-4f23-9e45-5716b7c14ba8",
+		"payload_data_type" : "json",
+		"date_created" : "20230506111144.8510955",
+		"element_parent_id" : "2XO9sNxaf0tBWBWE4fj2gl",
+		"element_id" : "1Cn$3jXq7CO_Zbm3Dje3S$",
+		"GlobalId" : "1Cn$3jXq7CO_Zbm3Dje3S$",
+		"Name" : "Port_4095_1",
+		"multi_reader_full_id" : 0,
+		"multi_reader_id" : 0,
+		"multi_reader_keyword" : "REVIT_1",
+		"multi_reader_type" : "REVIT",
+		"FlowDirection" : "SOURCEANDSINK",
+		"Description" : "Flow",
+		"_uuid" : "8c08c05b-5341-4b6a-b873-92fbad753218"
+	}
+]

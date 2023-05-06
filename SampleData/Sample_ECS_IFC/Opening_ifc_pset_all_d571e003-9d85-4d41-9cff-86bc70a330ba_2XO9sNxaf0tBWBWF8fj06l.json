@@ -1,0 +1,31 @@
+[
+	{
+		"component_version" : "00001",
+		"entity_guid" : "2XO9sNxaf0tBWBWF8fj06l",
+		"component_guid" : "d571e003-9d85-4d41-9cff-86bc70a330ba",
+		"name" : "Single Window:Standard:9471:1",
+		"context" : "hok.com/projects/123...",
+		"author" : "hok",
+		"source_data" : "C:\\+HOK\\OneDrive - HOK\\Downloads 677\\Sample_ECS_IFC.ifc",
+		"source_data_id" : "55913713-26e8-4503-92cf-5bcd8d903ea0",
+		"component_type" : "Pset_All",
+		"component_type_reference" : "https://buildingsmart.com/componentifc5010",
+		"version" : "3",
+		"status" : "WIP",
+		"active" : "1",
+		"author_software" : "Revit 2024",
+		"hash1" : "c8dbcc2d-be91-4fbb-b144-534a4b5ea557",
+		"payload_data_type" : "json",
+		"date_created" : "20230506111143.7168422",
+		"element_parent_id" : "2XO9sNxaf0tBWBWE4fj2xR",
+		"element_id" : "2XO9sNxaf0tBWBWF8fj06l",
+		"GlobalId" : "2XO9sNxaf0tBWBWF8fj06l",
+		"Name" : "Single Window:Standard:9471:1",
+		"Tag" : "9471",
+		"multi_reader_full_id" : 0,
+		"multi_reader_id" : 0,
+		"multi_reader_keyword" : "REVIT_1",
+		"multi_reader_type" : "REVIT",
+		"_uuid" : "d571e003-9d85-4d41-9cff-86bc70a330ba"
+	}
+]
