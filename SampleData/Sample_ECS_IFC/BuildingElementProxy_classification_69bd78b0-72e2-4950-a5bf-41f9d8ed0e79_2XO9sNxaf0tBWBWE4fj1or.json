@@ -1,0 +1,22 @@
+[
+	{
+		"component_version" : "00001",
+		"entity_guid" : "2XO9sNxaf0tBWBWE4fj1or",
+		"component_guid" : "69bd78b0-72e2-4950-a5bf-41f9d8ed0e79",
+		"name" : "RPC Tree - Deciduous:Lombardy Poplar - 40':14821",
+		"context" : "hok.com/projects/123...",
+		"author" : "hok",
+		"source_data" : "C:\\+HOK\\OneDrive - HOK\\Downloads 677\\Sample_ECS_IFC.ifc",
+		"source_data_id" : "85d0d53e-50cb-4644-b5be-4ddcd1d5d8b5",
+		"component_type" : "classification",
+		"component_type_reference" : "https://buildingsmart.com/componentifc5010",
+		"version" : "3",
+		"status" : "WIP",
+		"active" : "1",
+		"author_software" : "Revit 2024",
+		"hash1" : "103cb1d4-893c-47ca-bf97-6fa640935dbb",
+		"payload_data_type" : "json",
+		"date_created" : "20230506111144.9937169",
+		"classification" : "BuildingElementProxy"
+	}
+]

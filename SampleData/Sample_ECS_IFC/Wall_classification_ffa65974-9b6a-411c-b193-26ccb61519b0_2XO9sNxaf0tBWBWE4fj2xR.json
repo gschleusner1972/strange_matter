@@ -1,0 +1,22 @@
+[
+	{
+		"component_version" : "00001",
+		"entity_guid" : "2XO9sNxaf0tBWBWE4fj2xR",
+		"component_guid" : "ffa65974-9b6a-411c-b193-26ccb61519b0",
+		"name" : "Basic Wall:Wall 1:2955",
+		"context" : "hok.com/projects/123...",
+		"author" : "hok",
+		"source_data" : "C:\\+HOK\\OneDrive - HOK\\Downloads 677\\Sample_ECS_IFC.ifc",
+		"source_data_id" : "92f59383-4b63-46d0-983f-f7eed88f2b84",
+		"component_type" : "classification",
+		"component_type_reference" : "https://buildingsmart.com/componentifc5010",
+		"version" : "1",
+		"status" : "WIP",
+		"active" : "1",
+		"author_software" : "Revit 2024",
+		"hash1" : "56c29be7-47ec-409a-83a1-f213968e6e97",
+		"payload_data_type" : "json",
+		"date_created" : "20230506111145.1795052",
+		"classification" : "Wall"
+	}
+]
