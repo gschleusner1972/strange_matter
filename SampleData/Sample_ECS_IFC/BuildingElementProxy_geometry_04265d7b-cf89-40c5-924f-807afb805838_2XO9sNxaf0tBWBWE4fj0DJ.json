@@ -11,7 +11,7 @@
 		"author" : "hok",
 		"source_data" : "C:\\+HOK\\OneDrive - HOK\\Downloads 677\\Sample_ECS_IFC.ifc",
 		"source_data_id" : "94c3c65f-5ae2-41ad-bd0b-2aac1c4cdc2d",
-		"component_type" : "Geometry",
+		"component_type" : "IFC_Geometry",
 		"component_type_reference" : "https://buildingsmart.com/componentifc5010",
 		"version" : "2",
 		"status" : "WIP",
