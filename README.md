@@ -8,6 +8,6 @@ Strange Matter does this by providing a universal abstract concept of entity. Th
 
 Actual data in a Strange Matter project is organized in components and relationships.  Components are JSON headers that refer to data payloads, which can be in any format a user or tool generates. Relationships are defined in the same way as components, just without payloads, and can describe any kind of semantic relation between two components. A relationship between a component and entity is done by sharing a relationship with an Entity ID  component. 
 
-A detail walkthrough the of the reasoning, concepts the key technical concopets can be found in the wiki.
+A detail walkthrough the of the reasoning, requirements and key technical components can be found in the wiki.
 
 https://github.com/magnetar-io/strange_matter/wiki
