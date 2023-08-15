@@ -1,4 +1,4 @@
-### Strange Matter
+# Strange Matter
 Strange Matter is an open protocol for working with distributed, heterogeneous data used before, during, and after all phases of design and construction of the built-environment.
 
 Strange matter is format, vendor, and tool agnostic.  
