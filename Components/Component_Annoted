@@ -39,7 +39,7 @@
         "payload_path" : "<Local path or URL/URI>"
     },
     //If the component contains relationship data
-    "relationship_instance": {
+    "component_instance_relationship": {
     "source_entities" : "2XO9sNxaf0tBWBWE4fj28X",
     "source_components" : "12c5310a-fca8-434f-b36f-494754b157a4",
     "source_component_type" : "BuildingStory",
