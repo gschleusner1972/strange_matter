@@ -1,0 +1,62 @@
+{
+    "component_definition": {
+        "component_type" : "<Named Definition for the component>",
+        "component_type_reference" : "<URI to its definition>",
+        "component_version" : "<The Version Number of the Component Definition>",
+        "classification_reference" : "URI for the Classification Reference.",
+
+    },
+    "component_instance_data_source": {
+        "author" : "<Authors name, person or company etc>",
+        "context" : "<Domain and source that the instance data originated from>",
+        "source_data" : "<URL or URI for definition data>",
+        "source_data_id" : "<ID from the source  application>",
+        "source_data_other" : "<Other values from the source that are key to identifying the data>"
+    },
+    "component_instance_header": {
+        "entity_guid" : "<UUID7 value to represent the Entity>",
+        "component_guid" : "<UUID7 Value for the Component>",
+        "name" : "<User Name for the item>",
+        "classification_value" : "ifcslab",
+        "sequence_name" : "<If the component is part of a sequence...this names that sequence>",
+        "sequence_id" : "<UUID7 for the seqence>",
+        "sequence_value" : "<Ordered Number for the seqence>",
+        "date_created" : "<Creation_Date_Time of the Payload>",
+        "version" : "<Human Readable Semantic Version",
+        "version_id" : "<UUID7 Version GUID>",
+        "status" : "<WIP,Active,Other>",
+        "active" : "<Active Status Yes/No>"
+    },
+    "component_instance_payload_details": {
+        "author_software" : "<Name of the Authoring Software",
+        "hash" : "<Payload specific Hash of the payload data>",
+        "hash_definition": "<Link or descrition of hash>",
+        "payload_data_type" : "<encoding of the payload>",
+    },
+    //If the component contains instance data
+    "component_instance_payload": {
+        "payload_encoding" : "<Encoding of the payload>",
+        "payload_path" : "<Local path or URL/URI>"
+    },
+    //If the component contains relationship data
+    "relationship_instance": {
+    "source_entities" : "2XO9sNxaf0tBWBWE4fj28X",
+    "source_components" : "12c5310a-fca8-434f-b36f-494754b157a4",
+    "source_component_type" : "BuildingStory",
+    "destination_entities": [
+        "2XO9sNxaf0tBWBWF8fj06l", 
+        "2XO9sNxaf0tBWBWF8fj01x", 
+        "2XO9sNxaf0tBWBWF8fj3bd", 
+        // more items ...
+        "2XO9sNxaf0tBWBWE4fj2gH"
+    ],
+    "destination_components": [
+        "1cb6d448-9b57-48d1-8daf-b03e1c3fea86",
+        "32aedccb-4a4b-48fd-9181-0635d6cb281d",
+        // more items ...
+        "0bf7b19a-a6a7-448f-be4f-06d29a5d16c0"
+    ],
+    "destination_component_type" : ""
+}
+}
+
