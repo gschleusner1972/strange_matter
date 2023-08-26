@@ -60,14 +60,14 @@
     },
 
 
-    //If the component contains instance data
+    //If the component is an instance data component
     "component_instance_payload": {
         "payload_encoding" : "<Encoding of the payload>",
         "payload_encryption" :"?",
         "payload_path" : "<Local path or URL/URI>"
     },
     
-    //If the component contains relationship data
+    //If the component is a relationshiop component
     "component_instance_relationship": {
     "source_entities" : "2XO9sNxaf0tBWBWE4fj28X",
     "source_components" : "12c5310a-fca8-434f-b36f-494754b157a4",
