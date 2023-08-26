@@ -2,42 +2,71 @@
     "component_definition": {
         "component_type" : "<Named Definition for the component>",
         "component_type_reference" : "<URI to its definition>",
-        "component_version" : "<The Version Number of the Component Definition>",
-        "classification_reference" : "URI for the Classification Reference.",
+        "cmponent_type_guid" :"<UUID7 of the Component",
+        "cmponent_type__version_guid" :"<UUID7 of the Component Version",
+        "component_version" : "<Semantic Version of the Component Definition>",
+        "classification_reference" : "URI for the Classification Reference."
 
     },
+
+
     "component_instance_data_source": {
-        "author" : "<Authors name, person or company etc>",
-        "context" : "<Domain and source that the instance data originated from>",
+        "author" : ["<Authors name, person or company etc>"],
+        "context" : "<Domain/ Source that the instance data originated from>",
         "source_data" : "<URL or URI for definition data>",
-        "source_data_id" : "<ID from the source  application>",
+        "source_data_file_date": "<File or file like container date of creation>",
+        "source_data_file_id" :"<File or file like container id>",
+        "source_data_file_version_id":"<File or file like container version id>",
+        "source_data_item_id" : "<ID from the source application>",
+        "source_data_item_version_id": "<ID from the source application>",
         "source_data_other" : "<Other values from the source that are key to identifying the data>"
     },
+
+
+    "component_instance_data_extentions": {
+        "Name_space_1":{
+                "Value1":"<my value>"
+        },
+        "MyCompany_Workflow_Extention":{
+            "Value1":"<my value>"
+        }
+    },
+
+
     "component_instance_header": {
         "entity_guid" : "<UUID7 value to represent the Entity>",
         "component_guid" : "<UUID7 Value for the Component>",
+        "date_created" : "<Creation_Date_Time of the Payload>",
         "name" : "<User Name for the item>",
-        "classification_value" : "ifcslab",
+        "classification_value" : "Classification Value for the item",
         "sequence_name" : "<If the component is part of a sequence...this names that sequence>",
         "sequence_id" : "<UUID7 for the seqence>",
         "sequence_value" : "<Ordered Number for the seqence>",
-        "date_created" : "<Creation_Date_Time of the Payload>",
+        "option" : "<Specific Option of the data>",
+        "phase" : "<Specific User Data Phase",
         "version" : "<Human Readable Semantic Version",
         "version_id" : "<UUID7 Version GUID>",
         "status" : "<WIP,Active,Other>",
-        "active" : "<Active Status Yes/No>"
+        "active" : "<Active Status Yes/No>",
     },
+
+
     "component_instance_payload_details": {
         "author_software" : "<Name of the Authoring Software",
         "hash" : "<Payload specific Hash of the payload data>",
         "hash_definition": "<Link or descrition of hash>",
         "payload_data_type" : "<encoding of the payload>",
+      
     },
+
+
     //If the component contains instance data
     "component_instance_payload": {
         "payload_encoding" : "<Encoding of the payload>",
+        "payload_encryption" :"?",
         "payload_path" : "<Local path or URL/URI>"
     },
+    
     //If the component contains relationship data
     "component_instance_relationship": {
     "source_entities" : "2XO9sNxaf0tBWBWE4fj28X",
