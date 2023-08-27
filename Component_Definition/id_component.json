@@ -1,0 +1,27 @@
+{
+    "@context": {
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "ID_Component": "http://example.org/vocab#ID_Component",
+      "name": {
+        "@id": "http://schema.org/name",
+        "@type": "xsd:string"
+      },
+      "usernumber": {
+        "@id": "http://example.org/vocab#usernumber",
+        "@type": "xsd:string"
+      },
+      "classification": {
+        "@id": "http://example.org/vocab#classification",
+        "@type": "xsd:string"
+      },
+      "description": {
+        "@id": "http://schema.org/description",
+        "@type": "xsd:string"
+      },
+      "language": {
+        "@id": "http://schema.org/language",
+        "@type": "xsd:language"
+      }
+    }
+  }
+  

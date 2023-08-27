@@ -1,4 +1,4 @@
-{
+[{"component_definition": {
     "component_definition": {
         "component_type" : "<Named Definition for the component>",
         "component_type_reference" : "<URI to its definition>",
@@ -8,8 +8,6 @@
         "classification_reference" : "URI for the Classification Reference."
 
     },
-
-
     "component_instance_data_source": {
         "author" : ["<Authors name, person or company etc>"],
         "context" : "<Domain/ Source that the instance data originated from>",
@@ -21,8 +19,6 @@
         "source_data_item_version_id": "<ID from the source application>",
         "source_data_other" : "<Other values from the source that are key to identifying the data>"
     },
-
-
     "component_instance_data_extentions": {
         "Name_space_1":{
                 "Value1":"<my value>"
@@ -31,8 +27,6 @@
             "Value1":"<my value>"
         }
     },
-
-
     "component_instance_header": {
         "entity_guid" : "<UUID7 value to represent the Entity>",
         "component_guid" : "<UUID7 Value for the Component>",
@@ -49,24 +43,18 @@
         "status" : "<WIP,Active,Other>",
         "active" : "<Active Status Yes/No>",
     },
-
-
     "component_instance_payload_details": {
         "author_software" : "<Name of the Authoring Software",
         "hash" : "<Payload specific Hash of the payload data>",
         "hash_definition": "<Link or descrition of hash>",
         "payload_data_type" : "<encoding of the payload>",
-      
     },
-
-
     //If the component is an instance data component
     "component_instance_payload": {
         "payload_encoding" : "<Encoding of the payload>",
         "payload_encryption" :"?",
         "payload_path" : "<Local path or URL/URI>"
     },
-    
     //If the component is a relationshiop component
     "component_instance_relationship": {
     "source_entities" : "2XO9sNxaf0tBWBWE4fj28X",
@@ -88,4 +76,6 @@
     "destination_component_type" : ""
 }
 }
+}
+]
 

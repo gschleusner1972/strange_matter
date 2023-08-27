@@ -1,0 +1,37 @@
+{
+  "@context": {
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "my_fire_rating_for_walls_slabs": "http://hok.com/vocab#my_fire_rating_for_walls_slabs",
+      "Description": "Custom Component for fire rating on US Based Projects for HOK",
+      "FireRating": {
+          "@id": "https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireRating",
+          "@type": "xsd:string",
+          "@uuid": "a0b1c2d3-e4f5-6789-abcd-0123456789a8",
+          "@classification_restriction": ["ifcwall", "wall", "ifcslab", "slab"],
+          "@enum" :["1HR, 2HR, 3HR"],
+          "@localization":"Hourly Fire Rating"
+      },
+      "SmokeRating": {
+        "@id": "http://hok.com/vocab#SmokeRating",
+        "@type": "xsd:string",
+        "@uuid": "a0b1c2d3-e4f5-6789-abcd-0123456789at",
+        "@classification_restriction": ["ifcwall.partition", "wall.partition"],
+        "@enum" :["1HR, 2HR, 3HR"],
+        "@localization":"Hourly Smoke Rating"
+      },
+      "FireSmokeRating": {
+        "@id": "http://icc.com/vocab#FireSmokeRating",
+        "@type": "xsd:string",
+        "@uuid": "a0b1c2d3-e4f5-6789-abcd-01234567891b",
+        "@classification_restriction": ["ifcwall.partition", "wall.partition"],
+        "@enum" :["1HR, 2HR, 3HR"],
+        "@localization":"Hourly Fire/Smoke Rating"
+      },
+      "unit_time": {
+          "@id": "http://example.org/vocab#length_unit",
+          "@type": "xsd:string",
+          "@uuid": "f6a7b8c9-0123-4567-ghij-567890123ghi",
+          "@value": "Hours"
+      }
+  }
+}
