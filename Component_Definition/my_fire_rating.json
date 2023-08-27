@@ -1,6 +1,8 @@
 {
   "@context": {
-      "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "strange_matter_schema_version":"0.1",
+    "strange_matter_version_date": "20230827",  
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
       "my_fire_rating_for_walls_slabs": "http://hok.com/vocab#my_fire_rating_for_walls_slabs",
       "Description": "Custom Component for fire rating on US Based Projects for HOK",
       "FireRating": {
