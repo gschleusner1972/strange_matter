@@ -13,3 +13,38 @@ Strange Matter does this by providing a universal abstract concept of entity. Th
 Actual data is organized in components and relationships. Components are JSON headers that refer to data payloads, which can be in any format a user or tool generates. Relationships are defined in the same way as components, just without payloads, and can describe any kind of semantic relation between two components. A relationship between a component and entity is done by sharing a relationship with an Entity ID component.
 
 # Design Criteria
+
+Strange Matter was born from the key requirements of the industry. Chief among them is multiformat and multi standard support. It became clear that to reach this goal the protocol use to organize data had to be standard agnostic.
+
+Beyond that the actual data representation was informed by broad community input most of which is captured here.
+
+| **Requirement**                                              | **Description** | **Requirement Type** | **Design Solution**                                                    |
+|--------------------------------------------------------------|-----------------|----------------------|------------------------------------------------------------------------|
+| Data is Assembled/ Composed Not File Specific                |                 | Functional           | Entity Component Model where the Components are Packets of Data        |
+| Mulit-Format/Format Agnostic                                 |                 |                      | Strange Matter is Focus on Transprot and Modeling not representation   |
+| Rich Relationships                                           |                 |                      | Relationships can be described as needed                               |
+| Storage Technology Independent                               |                 |                      | Components are self describing and thus don't require a larger content |
+| Dynamic Updates and Transactions                             |                 |                      | Components are both small but also user scopable                       |
+| Files first                                                  |                 |                      |                                                                        |
+| Internet does last forever                                   |                 | Usability            |                                                                        |
+| Immutable                                                    |                 |                      |                                                                        |
+| Reference not own… only add (application don't own the data) |                 |                      |                                                                        |
+| Share as You need (half)                                     |                 |                      |                                                                        |
+| Heiarchy is in the eye of the beholder                       |                 | Security             |                                                                        |
+| definitoin is not instance data                              |                 |                      |                                                                        |
+| Git                                                          |                 |                      |                                                                        |
+| Data is independent of its container                         |                 |                      |                                                                        |
+| Benefit for all Creators, Adders/Maintainers                 |                 |                      |                                                                        |
+| Out of Order and Addititve                                   |                 |                      |                                                                        |
+| Protocol not an API…                                         |                 |                      |                                                                        |
+| Fine Control on Security/ Access                             |                 |                      |                                                                        |
+| Strange Matter has one component (currently)                 |                 |                      |                                                                        |
+| Classsifcation is for funtion/ Component Type is for content |                 |                      |                                                                        |
+|                                                              |                 |                      |                                                                        |
+| IFC on Strange Matter                                        |                 |                      |                                                                        |
+| location and positioning                                     |                 |                      |                                                                        |
+| Visual Display                                               |                 |                      |                                                                        |
+| Explicit Units                                               |                 |                      |                                                                        |
+| Bools not IFCBool                                            |                 |                      |                                                                        |
+| Simplify                                                     |                 |                      |                                                                        |
+| Developer Experience                                         |                 |                      |                                                                        |
