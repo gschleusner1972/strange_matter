@@ -115,18 +115,33 @@ Components are the key to this whols system working.  They hold three key bits o
 
 ## Getting Started
 
-The first thing you must do when going down this path is begin with explicit definitions for data.  The following is the JSON-LD representation of a SM Header.  
+The first thing you must do when going down this path is begin with explicit definitions for data. This technique takes data that might be defined in one location but now can be define in many places.  IFC has distributed definitions already so its not to dissimilar.    The following is the JSON-LD representation of a Strange Matter  Header.   Because it's necessary for each component to describe itself there is a fair amount of boiler plate.  When looking at storage this is why the columnar formats are interesting as they can compress data like this very easily. 
 
-```jsx
-{
+
+
+## Component Header Definition
+
+The definition is broken into several parts. 
+
+### Context 
+
+This the where JSON-LD makes a lot of sense it allows all the difference data sources to be called out. 
+
+```json
     "@context": {
         "strange_matter_component_header_definition_schema_version":"0.1",
         "strange_matter_version_date": "20230827",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "strange_matter_definition": "http://example.org/strangematter/v.01/vocab"
     },
-    "@graph": [
-        {
+```
+
+### Component Defintion
+
+This is a similar concept to classification references in IFC2x3/4 but more robust where this section describes its definition a source.  This could be used to describe specific values but in most cases the component definition is describing the payload. 
+
+```json
+ {
             "@type": "ComponentDefinition",
             "component_type": {
                 "@value": "<Named Definition for the component>",
@@ -152,7 +167,13 @@ The first thing you must do when going down this path is begin with explicit def
                 "@value": "URI for the Classification Reference.",
                 "@type": "xsd:anyURI"
             }
-        },
+```
+
+### Component Instance Data Source
+
+Where did this data come from, what are the identifiers of the data in the native application etc. 
+
+```json
         {
             "@type": "ComponentInstanceDataSource",
             "author": {
@@ -191,22 +212,13 @@ The first thing you must do when going down this path is begin with explicit def
                 "@value": "<Other values from the source that are key to identifying the data>",
                 "@type": "xsd:string"
             }
-        },
-        {
-            "@type": "ComponentInstanceDataExtensions",
-            "Name_space_1": {
-                "Value1": {
-                    "@value": "<my value>",
-                    "@type": "xsd:string"
-                }
-            },
-            "MyCompany_Workflow_Extention": {
-                "Value1": {
-                    "@value": "<my value>",
-                    "@type": "xsd:string"
-                }
-            }
-        },
+```
+
+### Component Instance Header
+
+All the descriptive detail on the Component itself.  Its IDs, Classification. Version, Status Etc. 
+
+```json
         {
             "@type": "ComponentInstanceHeader",
             "entity_guid": {
@@ -265,7 +277,13 @@ The first thing you must do when going down this path is begin with explicit def
                 "@value": "<Active Status Yes/No>",
                 "@type": "xsd:string"
             }
-        },
+```
+
+### Component Instance Payload Details and Component Instance Payload
+
+What is the payload, and the specific of the payload. 
+
+```json
         {
             "@type": "ComponentInstancePayloadDetails",
             "authoring_software": {
@@ -303,7 +321,13 @@ The first thing you must do when going down this path is begin with explicit def
                 "@value": "<Local path or URL/URI>",
                 "@type": "xsd:anyURI"
             }
-        },
+```
+
+### Component Instance Relationship 
+
+If the component is a relationship component and not a payload component this provides the details. 
+
+```json
         {
             "@type": "ComponentInstanceRelationship",
             "source_entities": {
@@ -342,10 +366,96 @@ The first thing you must do when going down this path is begin with explicit def
                 "@type": "xsd:string"
             }
         }
-    ]
-    
-}    
 ```
+
+## Payloads
+
+Next we describe a payload.  
+
+### Strange Matter ID Component
+
+Currently Strange Matter itself only describes 1 component.   That is the ID component.  Its how you make a thing exist.
+
+```json
+{
+    "@context": {
+      "strange_matter_component_payload_definition_version":"0.1",
+      "strange_matter_version_date": "20230827",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "ID_Component": "http://example.org/vocab#ID_Component",
+      "name": {
+        "@id": "http://schema.org/name",
+        "@type": "xsd:string"
+      },
+      "usernumber": {
+        "@id": "http://example.org/vocab#usernumber",
+        "@type": "xsd:string"
+      },
+      "classification": {
+        "@id": "http://example.org/vocab#classification",
+        "@type": "xsd:string"
+      },
+      "description": {
+        "@id": "http://schema.org/description",
+        "@type": "xsd:string"
+      },
+      "language": {
+        "@id": "http://schema.org/language",
+        "@type": "xsd:language"
+      }
+    }
+  }
+  
+```
+
+## My Fire Rating Component
+
+*This is where the Multi-Source, Assembly Model becomes clear.* Note how this component includes both BSI, and Other Definitions.  
+
+```json
+{
+  "@context": {
+    "strange_matter_component_payload_definition_version":"0.1",
+    "strange_matter_version_date": "20230827",  
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "my_fire_rating_for_walls_slabs": "http://hok.com/vocab#my_fire_rating_for_walls_slabs",
+      "Description": "Custom Component for fire rating on US Based Projects for HOK",
+      "FireRating": {
+          "@id": "https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/FireRating",
+          "@type": "xsd:string",
+          "@uuid": "a0b1c2d3-e4f5-6789-abcd-0123456789a8",
+          "@classification_restriction": ["ifcwall", "wall", "ifcslab", "slab"],
+          "@enum" :["1HR, 2HR, 3HR"],
+          "@localization":"Hourly Fire Rating"
+      },
+      "SmokeRating": {
+        "@id": "http://hok.com/vocab#SmokeRating",
+        "@type": "xsd:string",
+        "@uuid": "a0b1c2d3-e4f5-6789-abcd-0123456789at",
+        "@classification_restriction": ["ifcwall.partition", "wall.partition"],
+        "@enum" :["1HR, 2HR, 3HR"],
+        "@localization":"Hourly Smoke Rating"
+      },
+      "FireSmokeRating": {
+        "@id": "http://icc.com/vocab#FireSmokeRating",
+        "@type": "xsd:string",
+        "@uuid": "a0b1c2d3-e4f5-6789-abcd-01234567891b",
+        "@classification_restriction": ["ifcwall.partition", "wall.partition"],
+        "@enum" :["1HR, 2HR, 3HR"],
+        "@localization":"Hourly Fire/Smoke Rating"
+      },
+      "unit_time": {
+          "@id": "http://example.org/vocab#length_unit",
+          "@type": "xsd:string",
+          "@uuid": "f6a7b8c9-0123-4567-ghij-567890123ghi",
+          "@value": "Hours"
+      }
+  }
+}
+
+```
+
+
 
 ### Payloads
 
