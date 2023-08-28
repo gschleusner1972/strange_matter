@@ -79,5 +79,20 @@ most of which is captured here.
 
 # What is Strange Matter and How does it work?
 
+The main concepts behind Strange Matter come from Entity Component Systems. ECS.
+Instead of Inheritance-based objects and data it follows a Composition model.
+Here is a good technical background. [Leatherbee
+ECS](https://leatherbee.org/index.php/2019/09/12/ecs-1-inheritance-vs-composition-and-ecs-background/)
+
+It should be said from the outset that ECS learns from but given the need to
+allow for a distributed approach it diverges in some key areas so while ECS is
+the president Strange Matter follows its own rules and so is best described as a
+means to compose data .
+
+The graphic below illustrates the core ideas. A single entity might be fully
+described using several different types of data, from different standards and
+systems. Hence an object-based definition from classical programming is not well
+suited.
+
 ![A diagram of components with text Description automatically
 generated](media/94607d6f445c9433155558dd1a34cabf.jpg)
