@@ -269,7 +269,7 @@ If the component is a relationship component and not a payload component this pr
         }
 ```
 
-## Payloads
+## Description a Component Payload
 
 Next we describe a payload.  
 
@@ -366,7 +366,7 @@ Currently Strange Matter itself only describes 1 component.   That is the ID com
 goes here...
 ```
 
-
+## Payload Examples
 
 ## Step Geometry (~IFC Today)
 
@@ -621,29 +621,11 @@ goes here...
 
 
 
-### Payloads
+## ALL IFC PSETS
 
-Payloads is the name given to the data the Component is referencing.  This can be stored “in” the component or referenced. 
-
-### Example Instance Data of an IFC4 Floor converted to Strange Matter
-
-
-
-### Geometry
-
-Here is a sample of an IFC4,  IFC Floor converted to GeoJSON data and packaged in a “Geometry” component.  The Geometry Component Definition will most likely want to be more precise than just “Geometry,” but this is a sample. 
-
-
-
-### PSET All - Revit Values
-
-This is for demo purposes, as you’d most likely not want to package all the values into one component, but it won’t violate any rules to do so. 
-
-
-
-### Relationship
-
-Relationships are Components just like Data Components.  Here you’ll find a relationship that states that several Entities and Components have a relationship with a building Story Entity and Its Components. 
+```
+ggg
+```
 
 
 
