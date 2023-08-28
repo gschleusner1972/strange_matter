@@ -1,12 +1,13 @@
 [
 {
-"authoring_software":"FME",
+"authoring_software":"Hypar",
 "payload_hash":"value",
 "payload_hash_definition":"na",
-"payload_data_type": "geojson",
+"payload_data_type": "json",
 "payload_encoding":"na",
 "payload_encryption":"na",
-"payload_data":"Vertices": [
+"payload_data":{"discriminator":"Elements.Geometry.Polygon",
+    "Vertices": [
         {
             "X": -10.276991193869598,
             "Y": -1.1511904595984275,
@@ -108,5 +109,6 @@
             "Z": 0.0
         }
     ]
+}
 }
 ]

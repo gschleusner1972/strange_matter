@@ -1,6 +1,6 @@
 {
   "@context": {
-    "strange_matter_schema_version":"0.1",
+    "strange_matter_component_payload_definition_version":"0.1",
     "strange_matter_version_date": "20230827",  
     "xsd": "http://www.w3.org/2001/XMLSchema#",
       "my_fire_rating_for_walls_slabs": "http://hok.com/vocab#my_fire_rating_for_walls_slabs",

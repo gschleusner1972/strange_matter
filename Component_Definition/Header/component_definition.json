@@ -1,6 +1,6 @@
 {
     "@context": {
-        "strange_matter_schema_version":"0.1",
+        "strange_matter_component_header_definition_schema_version":"0.1",
         "strange_matter_version_date": "20230827",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "strange_matter_definition": "http://example.org/strangematter/v.01/vocab"
@@ -148,11 +148,11 @@
         },
         {
             "@type": "ComponentInstancePayloadDetails",
-            "author_software": {
+            "authoring_software": {
                 "@value": "<Name of the Authoring Software>",
                 "@type": "xsd:string"
             },
-            "hash": {
+            "payload_hash": {
                 "@value": "<Payload specific Hash of the payload data>",
                 "@type": "xsd:string"
             },
@@ -175,7 +175,7 @@
                 "@value": "?",
                 "@type": "xsd:string"
             },
-            "payload_path": {
+            "payload_data": {
                 "@value": "<Local path or URL/URI>",
                 "@type": "xsd:anyURI"
             }
