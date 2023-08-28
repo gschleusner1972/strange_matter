@@ -1,9 +1,9 @@
 [
 {
-"authoring_software":"FME",
+"authoring_software":"?",
 "payload_hash":"value",
 "payload_hash_definition":"na",
-"payload_data_type": "step24",
+"payload_data_type": "step21",
 "payload_encoding":"na",
 "payload_encryption":"na",
 "payload_data": "ISO-10303-21;

@@ -163,6 +163,10 @@
             "payload_data_type": {
                 "@value": "<encoding of the payload>",
                 "@type": "xsd:string"
+            },
+            "payload_data_type_definition": {
+                "@value": "<encoding of the payload>",
+                "@type": "xsd:anyURI"
             }
         },
         {

@@ -1,0 +1,1349 @@
+[
+{
+"authoring_software":"Lady Bug Tools",
+"payload_hash":"value",
+"payload_hash_definition":"na",
+"payload_data_type": "hbjson",
+"payload_data_type_definition":"https://www.ladybug.tools/honeybee-schema/model.html",
+"payload_encoding":"na",
+"payload_encryption":"na",
+"payload_data":{
+    "type": "Model",
+    "identifier": "Patient_Room_Test_Box",
+    "display_name": "Patient_Room_Test_Box",
+    "units": "Meters",
+    "properties": {
+        "type": "ModelProperties",
+        "energy": {
+            "type": "ModelEnergyProperties",
+            "construction_sets": [],
+            "constructions": [],
+            "materials": [],
+            "hvacs": [
+                {
+                    "type": "IdealAirSystemAbridged",
+                    "identifier": "Hospital_Patient_Room_IdealAir",
+                    "economizer_type": "DifferentialEnthalpy",
+                    "demand_controlled_ventilation": false,
+                    "sensible_heat_recovery": 0.81,
+                    "latent_heat_recovery": 0.68,
+                    "heating_air_temperature": 50.0,
+                    "cooling_air_temperature": 13.0,
+                    "heating_limit": {
+                        "type": "Autosize"
+                    },
+                    "cooling_limit": {
+                        "type": "Autosize"
+                    }
+                }
+            ],
+            "program_types": [
+                {
+                    "type": "ProgramTypeAbridged",
+                    "identifier": "2013::Hospital::ICU_PatRm",
+                    "people": {
+                        "type": "PeopleAbridged",
+                        "identifier": "2013::Hospital::ICU_PatRm_People",
+                        "people_per_area": 0.05381957525591208,
+                        "radiant_fraction": 0.3,
+                        "latent_fraction": {
+                            "type": "Autocalculate"
+                        },
+                        "occupancy_schedule": "Hospital BLDG_OCC_EXTD_SCH",
+                        "activity_schedule": "Hospital ACTIVITY_SCH"
+                    },
+                    "lighting": {
+                        "type": "LightingAbridged",
+                        "identifier": "2013::Hospital::ICU_PatRm_Lighting",
+                        "watts_per_area": 6.673617999999999,
+                        "return_air_fraction": 0.0,
+                        "radiant_fraction": 0.7,
+                        "visible_fraction": 0.2,
+                        "schedule": "Hospital BLDG_LIGHT_EXTD_SCH"
+                    },
+                    "electric_equipment": {
+                        "type": "ElectricEquipmentAbridged",
+                        "identifier": "2013::Hospital::ICU_PatRm_Electric",
+                        "watts_per_area": 32.2917,
+                        "radiant_fraction": 0.5,
+                        "latent_fraction": 0.0,
+                        "lost_fraction": 0.0,
+                        "schedule": "Hospital BLDG_EQUIP_EXTD_SCH"
+                    },
+                    "infiltration": {
+                        "type": "InfiltrationAbridged",
+                        "identifier": "2013::Hospital::ICU_PatRm_Infiltration",
+                        "flow_per_exterior_area": 0.00022656800000000002,
+                        "schedule": "Hospital INFIL_SCH_PNNL"
+                    },
+                    "ventilation": {
+                        "type": "VentilationAbridged",
+                        "identifier": "2013::Hospital::ICU_PatRm_Ventilation",
+                        "air_changes_per_hour": 2.0
+                    },
+                    "setpoint": {
+                        "type": "SetpointAbridged",
+                        "identifier": "2013::Hospital::ICU_PatRm_Setpoint",
+                        "heating_schedule": "Hospital HTGSETP_SCH",
+                        "cooling_schedule": "Hospital CLGSETP_SCH"
+                    }
+                }
+            ],
+            "schedules": [
+                {
+                    "type": "ScheduleRulesetAbridged",
+                    "identifier": "Humidity Controlled PatRm Setpt_HtgSetp",
+                    "day_schedules": [
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Humidity Controlled PatRm Setpt_HtgSetp_Day Schedule",
+                            "values": [
+                                21.0
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        }
+                    ],
+                    "default_day_schedule": "Humidity Controlled PatRm Setpt_HtgSetp_Day Schedule",
+                    "schedule_type_limit": "Temperature"
+                },
+                {
+                    "type": "ScheduleRulesetAbridged",
+                    "identifier": "Hospital HTGSETP_SCH",
+                    "day_schedules": [
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital HTGSETP_SCH_Default",
+                            "values": [
+                                21.0
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        },
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital HTGSETP_SCH_SmrDsn",
+                            "values": [
+                                21.0
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        },
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital HTGSETP_SCH_WntrDsn",
+                            "values": [
+                                21.0
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        }
+                    ],
+                    "default_day_schedule": "Hospital HTGSETP_SCH_Default",
+                    "summer_designday_schedule": "Hospital HTGSETP_SCH_SmrDsn",
+                    "winter_designday_schedule": "Hospital HTGSETP_SCH_WntrDsn",
+                    "schedule_type_limit": "Temperature"
+                },
+                {
+                    "type": "ScheduleRulesetAbridged",
+                    "identifier": "Hospital INFIL_SCH_PNNL",
+                    "day_schedules": [
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital INFIL_SCH_PNNL_Default",
+                            "values": [
+                                0.25
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        },
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital INFIL_SCH_PNNL_SmrDsn",
+                            "values": [
+                                0.25
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        },
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital INFIL_SCH_PNNL_WntrDsn",
+                            "values": [
+                                0.25
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        },
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital INFIL_SCH_PNNL_Sat|Wkdy",
+                            "values": [
+                                0.25
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        }
+                    ],
+                    "default_day_schedule": "Hospital INFIL_SCH_PNNL_Default",
+                    "schedule_rules": [
+                        {
+                            "type": "ScheduleRuleAbridged",
+                            "schedule_day": "Hospital INFIL_SCH_PNNL_Sat|Wkdy",
+                            "apply_sunday": false,
+                            "apply_monday": true,
+                            "apply_tuesday": true,
+                            "apply_wednesday": true,
+                            "apply_thursday": true,
+                            "apply_friday": true,
+                            "apply_saturday": true,
+                            "start_date": [
+                                1,
+                                1
+                            ],
+                            "end_date": [
+                                12,
+                                31
+                            ]
+                        }
+                    ],
+                    "summer_designday_schedule": "Hospital INFIL_SCH_PNNL_SmrDsn",
+                    "winter_designday_schedule": "Hospital INFIL_SCH_PNNL_WntrDsn",
+                    "schedule_type_limit": "Fractional"
+                },
+                {
+                    "type": "ScheduleRulesetAbridged",
+                    "identifier": "Humidity Controlled PatRm Setpt_DeHumidSetp",
+                    "day_schedules": [
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Humidity Controlled PatRm Setpt_DeHumidSetp_Day Schedule",
+                            "values": [
+                                55.0
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        }
+                    ],
+                    "default_day_schedule": "Humidity Controlled PatRm Setpt_DeHumidSetp_Day Schedule",
+                    "schedule_type_limit": "Humidity"
+                },
+                {
+                    "type": "ScheduleRulesetAbridged",
+                    "identifier": "Humidity Controlled PatRm Setpt_DeHumidSetp",
+                    "day_schedules": [
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Humidity Controlled PatRm Setpt_DeHumidSetp_Day Schedule",
+                            "values": [
+                                30.0
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        }
+                    ],
+                    "default_day_schedule": "Humidity Controlled PatRm Setpt_DeHumidSetp_Day Schedule",
+                    "schedule_type_limit": "Humidity"
+                },
+                {
+                    "type": "ScheduleRulesetAbridged",
+                    "identifier": "Hospital ACTIVITY_SCH",
+                    "day_schedules": [
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital ACTIVITY_SCH_Default",
+                            "values": [
+                                120.0
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        },
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital ACTIVITY_SCH_SmrDsn",
+                            "values": [
+                                120.0
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        },
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital ACTIVITY_SCH_WntrDsn",
+                            "values": [
+                                120.0
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        }
+                    ],
+                    "default_day_schedule": "Hospital ACTIVITY_SCH_Default",
+                    "summer_designday_schedule": "Hospital ACTIVITY_SCH_SmrDsn",
+                    "winter_designday_schedule": "Hospital ACTIVITY_SCH_WntrDsn",
+                    "schedule_type_limit": "Activity Level"
+                },
+                {
+                    "type": "ScheduleRulesetAbridged",
+                    "identifier": "Hospital CLGSETP_SCH",
+                    "day_schedules": [
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital CLGSETP_SCH_Default",
+                            "values": [
+                                24.0
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        },
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital CLGSETP_SCH_SmrDsn",
+                            "values": [
+                                24.0
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        },
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital CLGSETP_SCH_WntrDsn",
+                            "values": [
+                                24.0
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        }
+                    ],
+                    "default_day_schedule": "Hospital CLGSETP_SCH_Default",
+                    "summer_designday_schedule": "Hospital CLGSETP_SCH_SmrDsn",
+                    "winter_designday_schedule": "Hospital CLGSETP_SCH_WntrDsn",
+                    "schedule_type_limit": "Temperature"
+                },
+                {
+                    "type": "ScheduleRulesetAbridged",
+                    "identifier": "Humidity Controlled PatRm Setpt_ClgSetp",
+                    "day_schedules": [
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Humidity Controlled PatRm Setpt_ClgSetp_Day Schedule",
+                            "values": [
+                                24.0
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        }
+                    ],
+                    "default_day_schedule": "Humidity Controlled PatRm Setpt_ClgSetp_Day Schedule",
+                    "schedule_type_limit": "Temperature"
+                },
+                {
+                    "type": "ScheduleRulesetAbridged",
+                    "identifier": "Hospital BLDG_OCC_EXTD_SCH",
+                    "day_schedules": [
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital BLDG_OCC_EXTD_SCH_Default",
+                            "values": [
+                                0.4,
+                                0.6,
+                                0.4
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    8,
+                                    0
+                                ],
+                                [
+                                    16,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        },
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital BLDG_OCC_EXTD_SCH_SmrDsn",
+                            "values": [
+                                1.0
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        },
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital BLDG_OCC_EXTD_SCH_WntrDsn",
+                            "values": [
+                                0.0
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        },
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital BLDG_OCC_EXTD_SCH_Sat",
+                            "values": [
+                                0.4,
+                                0.5,
+                                0.6,
+                                0.5,
+                                0.4
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    7,
+                                    0
+                                ],
+                                [
+                                    8,
+                                    0
+                                ],
+                                [
+                                    17,
+                                    0
+                                ],
+                                [
+                                    19,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        },
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital BLDG_OCC_EXTD_SCH_Wkdy",
+                            "values": [
+                                0.4,
+                                0.5,
+                                0.6,
+                                0.8,
+                                0.6,
+                                0.5,
+                                0.4
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    7,
+                                    0
+                                ],
+                                [
+                                    8,
+                                    0
+                                ],
+                                [
+                                    9,
+                                    0
+                                ],
+                                [
+                                    17,
+                                    0
+                                ],
+                                [
+                                    18,
+                                    0
+                                ],
+                                [
+                                    20,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        }
+                    ],
+                    "default_day_schedule": "Hospital BLDG_OCC_EXTD_SCH_Default",
+                    "schedule_rules": [
+                        {
+                            "type": "ScheduleRuleAbridged",
+                            "schedule_day": "Hospital BLDG_OCC_EXTD_SCH_Sat",
+                            "apply_sunday": false,
+                            "apply_monday": false,
+                            "apply_tuesday": false,
+                            "apply_wednesday": false,
+                            "apply_thursday": false,
+                            "apply_friday": false,
+                            "apply_saturday": true,
+                            "start_date": [
+                                1,
+                                1
+                            ],
+                            "end_date": [
+                                12,
+                                31
+                            ]
+                        },
+                        {
+                            "type": "ScheduleRuleAbridged",
+                            "schedule_day": "Hospital BLDG_OCC_EXTD_SCH_Wkdy",
+                            "apply_sunday": false,
+                            "apply_monday": true,
+                            "apply_tuesday": true,
+                            "apply_wednesday": true,
+                            "apply_thursday": true,
+                            "apply_friday": true,
+                            "apply_saturday": false,
+                            "start_date": [
+                                1,
+                                1
+                            ],
+                            "end_date": [
+                                12,
+                                31
+                            ]
+                        }
+                    ],
+                    "summer_designday_schedule": "Hospital BLDG_OCC_EXTD_SCH_SmrDsn",
+                    "winter_designday_schedule": "Hospital BLDG_OCC_EXTD_SCH_WntrDsn",
+                    "schedule_type_limit": "Fractional"
+                },
+                {
+                    "type": "ScheduleRulesetAbridged",
+                    "identifier": "Hospital BLDG_EQUIP_EXTD_SCH",
+                    "day_schedules": [
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital BLDG_EQUIP_EXTD_SCH_Default",
+                            "values": [
+                                0.4,
+                                0.6,
+                                0.4
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    8,
+                                    0
+                                ],
+                                [
+                                    16,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        },
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital BLDG_EQUIP_EXTD_SCH_SmrDsn",
+                            "values": [
+                                1.0
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        },
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital BLDG_EQUIP_EXTD_SCH_WntrDsn",
+                            "values": [
+                                0.0
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        },
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital BLDG_EQUIP_EXTD_SCH_Sat",
+                            "values": [
+                                0.4,
+                                0.5,
+                                0.65,
+                                0.4
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    7,
+                                    0
+                                ],
+                                [
+                                    8,
+                                    0
+                                ],
+                                [
+                                    18,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        },
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital BLDG_EQUIP_EXTD_SCH_Wkdy",
+                            "values": [
+                                0.4,
+                                0.7,
+                                0.9,
+                                0.6,
+                                0.4
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    7,
+                                    0
+                                ],
+                                [
+                                    8,
+                                    0
+                                ],
+                                [
+                                    16,
+                                    0
+                                ],
+                                [
+                                    23,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        }
+                    ],
+                    "default_day_schedule": "Hospital BLDG_EQUIP_EXTD_SCH_Default",
+                    "schedule_rules": [
+                        {
+                            "type": "ScheduleRuleAbridged",
+                            "schedule_day": "Hospital BLDG_EQUIP_EXTD_SCH_Sat",
+                            "apply_sunday": false,
+                            "apply_monday": false,
+                            "apply_tuesday": false,
+                            "apply_wednesday": false,
+                            "apply_thursday": false,
+                            "apply_friday": false,
+                            "apply_saturday": true,
+                            "start_date": [
+                                1,
+                                1
+                            ],
+                            "end_date": [
+                                12,
+                                31
+                            ]
+                        },
+                        {
+                            "type": "ScheduleRuleAbridged",
+                            "schedule_day": "Hospital BLDG_EQUIP_EXTD_SCH_Wkdy",
+                            "apply_sunday": false,
+                            "apply_monday": true,
+                            "apply_tuesday": true,
+                            "apply_wednesday": true,
+                            "apply_thursday": true,
+                            "apply_friday": true,
+                            "apply_saturday": false,
+                            "start_date": [
+                                1,
+                                1
+                            ],
+                            "end_date": [
+                                12,
+                                31
+                            ]
+                        }
+                    ],
+                    "summer_designday_schedule": "Hospital BLDG_EQUIP_EXTD_SCH_SmrDsn",
+                    "winter_designday_schedule": "Hospital BLDG_EQUIP_EXTD_SCH_WntrDsn",
+                    "schedule_type_limit": "Fractional"
+                },
+                {
+                    "type": "ScheduleRulesetAbridged",
+                    "identifier": "Hospital BLDG_LIGHT_EXTD_SCH",
+                    "day_schedules": [
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital BLDG_LIGHT_EXTD_SCH_Default",
+                            "values": [
+                                0.5,
+                                0.7,
+                                0.5
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    8,
+                                    0
+                                ],
+                                [
+                                    16,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        },
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital BLDG_LIGHT_EXTD_SCH_SmrDsn",
+                            "values": [
+                                1.0
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        },
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital BLDG_LIGHT_EXTD_SCH_WntrDsn",
+                            "values": [
+                                0.0
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        },
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital BLDG_LIGHT_EXTD_SCH_Sat",
+                            "values": [
+                                0.5,
+                                0.8,
+                                0.5
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    8,
+                                    0
+                                ],
+                                [
+                                    18,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        },
+                        {
+                            "type": "ScheduleDay",
+                            "identifier": "Hospital BLDG_LIGHT_EXTD_SCH_Wkdy",
+                            "values": [
+                                0.5,
+                                0.9,
+                                0.5
+                            ],
+                            "times": [
+                                [
+                                    0,
+                                    0
+                                ],
+                                [
+                                    8,
+                                    0
+                                ],
+                                [
+                                    16,
+                                    0
+                                ]
+                            ],
+                            "interpolate": false
+                        }
+                    ],
+                    "default_day_schedule": "Hospital BLDG_LIGHT_EXTD_SCH_Default",
+                    "schedule_rules": [
+                        {
+                            "type": "ScheduleRuleAbridged",
+                            "schedule_day": "Hospital BLDG_LIGHT_EXTD_SCH_Sat",
+                            "apply_sunday": false,
+                            "apply_monday": false,
+                            "apply_tuesday": false,
+                            "apply_wednesday": false,
+                            "apply_thursday": false,
+                            "apply_friday": false,
+                            "apply_saturday": true,
+                            "start_date": [
+                                1,
+                                1
+                            ],
+                            "end_date": [
+                                12,
+                                31
+                            ]
+                        },
+                        {
+                            "type": "ScheduleRuleAbridged",
+                            "schedule_day": "Hospital BLDG_LIGHT_EXTD_SCH_Wkdy",
+                            "apply_sunday": false,
+                            "apply_monday": true,
+                            "apply_tuesday": true,
+                            "apply_wednesday": true,
+                            "apply_thursday": true,
+                            "apply_friday": true,
+                            "apply_saturday": false,
+                            "start_date": [
+                                1,
+                                1
+                            ],
+                            "end_date": [
+                                12,
+                                31
+                            ]
+                        }
+                    ],
+                    "summer_designday_schedule": "Hospital BLDG_LIGHT_EXTD_SCH_SmrDsn",
+                    "winter_designday_schedule": "Hospital BLDG_LIGHT_EXTD_SCH_WntrDsn",
+                    "schedule_type_limit": "Fractional"
+                }
+            ],
+            "schedule_type_limits": [
+                {
+                    "type": "ScheduleTypeLimit",
+                    "identifier": "Humidity",
+                    "lower_limit": 0.0,
+                    "upper_limit": 100.0,
+                    "numeric_type": "Continuous",
+                    "unit_type": "Percent"
+                },
+                {
+                    "type": "ScheduleTypeLimit",
+                    "identifier": "Activity Level",
+                    "lower_limit": 0.0,
+                    "upper_limit": {
+                        "type": "NoLimit"
+                    },
+                    "numeric_type": "Continuous",
+                    "unit_type": "ActivityLevel"
+                },
+                {
+                    "type": "ScheduleTypeLimit",
+                    "identifier": "Temperature",
+                    "lower_limit": -273.15,
+                    "upper_limit": {
+                        "type": "NoLimit"
+                    },
+                    "numeric_type": "Continuous",
+                    "unit_type": "Temperature"
+                },
+                {
+                    "type": "ScheduleTypeLimit",
+                    "identifier": "Fractional",
+                    "lower_limit": 0.0,
+                    "upper_limit": 1.0,
+                    "numeric_type": "Continuous",
+                    "unit_type": "Dimensionless"
+                }
+            ]
+        },
+        "radiance": {
+            "type": "ModelRadianceProperties",
+            "modifier_sets": [],
+            "modifiers": []
+        }
+    },
+    "rooms": [
+        {
+            "type": "Room",
+            "identifier": "Hospital_Patient_Room",
+            "display_name": "Hospital_Patient_Room",
+            "properties": {
+                "type": "RoomPropertiesAbridged",
+                "energy": {
+                    "type": "RoomEnergyPropertiesAbridged",
+                    "program_type": "2013::Hospital::ICU_PatRm",
+                    "hvac": "Hospital_Patient_Room_IdealAir",
+                    "setpoint": {
+                        "type": "SetpointAbridged",
+                        "identifier": "Humidity Controlled PatRm Setpt",
+                        "heating_schedule": "Humidity Controlled PatRm Setpt_HtgSetp",
+                        "cooling_schedule": "Humidity Controlled PatRm Setpt_ClgSetp",
+                        "humidifying_schedule": "Humidity Controlled PatRm Setpt_DeHumidSetp",
+                        "dehumidifying_schedule": "Humidity Controlled PatRm Setpt_DeHumidSetp"
+                    }
+                },
+                "radiance": {
+                    "type": "RoomRadiancePropertiesAbridged"
+                }
+            },
+            "faces": [
+                {
+                    "type": "Face",
+                    "identifier": "Hospital_Patient_Room_Bottom",
+                    "display_name": "Hospital_Patient_Room_Bottom",
+                    "properties": {
+                        "type": "FacePropertiesAbridged",
+                        "energy": {
+                            "type": "FaceEnergyPropertiesAbridged"
+                        },
+                        "radiance": {
+                            "type": "FaceRadiancePropertiesAbridged"
+                        }
+                    },
+                    "geometry": {
+                        "type": "Face3D",
+                        "boundary": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                10.0,
+                                0.0
+                            ],
+                            [
+                                5.0,
+                                10.0,
+                                0.0
+                            ],
+                            [
+                                5.0,
+                                0.0,
+                                0.0
+                            ]
+                        ]
+                    },
+                    "face_type": "Floor",
+                    "boundary_condition": {
+                        "type": "Adiabatic"
+                    }
+                },
+                {
+                    "type": "Face",
+                    "identifier": "Hospital_Patient_Room_Front",
+                    "display_name": "Hospital_Patient_Room_Front",
+                    "properties": {
+                        "type": "FacePropertiesAbridged",
+                        "energy": {
+                            "type": "FaceEnergyPropertiesAbridged"
+                        },
+                        "radiance": {
+                            "type": "FaceRadiancePropertiesAbridged"
+                        }
+                    },
+                    "geometry": {
+                        "type": "Face3D",
+                        "boundary": [
+                            [
+                                5.0,
+                                10.0,
+                                3.0
+                            ],
+                            [
+                                5.0,
+                                10.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                10.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                10.0,
+                                3.0
+                            ]
+                        ]
+                    },
+                    "face_type": "Wall",
+                    "boundary_condition": {
+                        "type": "Adiabatic"
+                    }
+                },
+                {
+                    "type": "Face",
+                    "identifier": "Hospital_Patient_Room_Right",
+                    "display_name": "Hospital_Patient_Room_Right",
+                    "properties": {
+                        "type": "FacePropertiesAbridged",
+                        "energy": {
+                            "type": "FaceEnergyPropertiesAbridged"
+                        },
+                        "radiance": {
+                            "type": "FaceRadiancePropertiesAbridged"
+                        }
+                    },
+                    "geometry": {
+                        "type": "Face3D",
+                        "boundary": [
+                            [
+                                5.0,
+                                0.0,
+                                3.0
+                            ],
+                            [
+                                5.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                5.0,
+                                10.0,
+                                0.0
+                            ],
+                            [
+                                5.0,
+                                10.0,
+                                3.0
+                            ]
+                        ]
+                    },
+                    "face_type": "Wall",
+                    "boundary_condition": {
+                        "type": "Adiabatic"
+                    }
+                },
+                {
+                    "type": "Face",
+                    "identifier": "Hospital_Patient_Room_Back",
+                    "display_name": "Hospital_Patient_Room_Back",
+                    "properties": {
+                        "type": "FacePropertiesAbridged",
+                        "energy": {
+                            "type": "FaceEnergyPropertiesAbridged"
+                        },
+                        "radiance": {
+                            "type": "FaceRadiancePropertiesAbridged"
+                        }
+                    },
+                    "geometry": {
+                        "type": "Face3D",
+                        "boundary": [
+                            [
+                                0.0,
+                                0.0,
+                                3.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                5.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                5.0,
+                                0.0,
+                                3.0
+                            ]
+                        ]
+                    },
+                    "face_type": "Wall",
+                    "boundary_condition": {
+                        "type": "Outdoors",
+                        "sun_exposure": true,
+                        "wind_exposure": true,
+                        "view_factor": {
+                            "type": "Autocalculate"
+                        }
+                    },
+                    "apertures": [
+                        {
+                            "type": "Aperture",
+                            "identifier": "Hospital_Patient_Room_Back_Glz0",
+                            "display_name": "Hospital_Patient_Room_Back_Glz0",
+                            "properties": {
+                                "type": "AperturePropertiesAbridged",
+                                "energy": {
+                                    "type": "ApertureEnergyPropertiesAbridged"
+                                },
+                                "radiance": {
+                                    "type": "ApertureRadiancePropertiesAbridged"
+                                }
+                            },
+                            "geometry": {
+                                "type": "Face3D",
+                                "boundary": [
+                                    [
+                                        0.9188611699158102,
+                                        0.0,
+                                        2.448683298050514
+                                    ],
+                                    [
+                                        0.9188611699158102,
+                                        0.0,
+                                        0.5513167019494862
+                                    ],
+                                    [
+                                        4.08113883008419,
+                                        0.0,
+                                        0.5513167019494862
+                                    ],
+                                    [
+                                        4.08113883008419,
+                                        0.0,
+                                        2.448683298050514
+                                    ]
+                                ]
+                            },
+                            "is_operable": false,
+                            "boundary_condition": {
+                                "type": "Outdoors",
+                                "sun_exposure": true,
+                                "wind_exposure": true,
+                                "view_factor": {
+                                    "type": "Autocalculate"
+                                }
+                            },
+                            "outdoor_shades": [
+                                {
+                                    "type": "Shade",
+                                    "identifier": "Hospital_Patient_Room_Back_Glz0_OutOverhang0",
+                                    "display_name": "Hospital_Patient_Room_Back_Glz0_OutOverhang0",
+                                    "properties": {
+                                        "type": "ShadePropertiesAbridged",
+                                        "energy": {
+                                            "type": "ShadeEnergyPropertiesAbridged"
+                                        },
+                                        "radiance": {
+                                            "type": "ShadeRadiancePropertiesAbridged"
+                                        }
+                                    },
+                                    "geometry": {
+                                        "type": "Face3D",
+                                        "boundary": [
+                                            [
+                                                4.08113883008419,
+                                                0.0,
+                                                2.4486831980505146
+                                            ],
+                                            [
+                                                0.91886116991581,
+                                                0.0,
+                                                2.4486831980505146
+                                            ],
+                                            [
+                                                0.91886116991581,
+                                                -0.5,
+                                                2.4486831980505146
+                                            ],
+                                            [
+                                                4.08113883008419,
+                                                -0.5,
+                                                2.4486831980505146
+                                            ]
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Face",
+                    "identifier": "Hospital_Patient_Room_Left",
+                    "display_name": "Hospital_Patient_Room_Left",
+                    "properties": {
+                        "type": "FacePropertiesAbridged",
+                        "energy": {
+                            "type": "FaceEnergyPropertiesAbridged"
+                        },
+                        "radiance": {
+                            "type": "FaceRadiancePropertiesAbridged"
+                        }
+                    },
+                    "geometry": {
+                        "type": "Face3D",
+                        "boundary": [
+                            [
+                                0.0,
+                                10.0,
+                                3.0
+                            ],
+                            [
+                                0.0,
+                                10.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                3.0
+                            ]
+                        ]
+                    },
+                    "face_type": "Wall",
+                    "boundary_condition": {
+                        "type": "Adiabatic"
+                    }
+                },
+                {
+                    "type": "Face",
+                    "identifier": "Hospital_Patient_Room_Top",
+                    "display_name": "Hospital_Patient_Room_Top",
+                    "properties": {
+                        "type": "FacePropertiesAbridged",
+                        "energy": {
+                            "type": "FaceEnergyPropertiesAbridged"
+                        },
+                        "radiance": {
+                            "type": "FaceRadiancePropertiesAbridged"
+                        }
+                    },
+                    "geometry": {
+                        "type": "Face3D",
+                        "boundary": [
+                            [
+                                5.0,
+                                0.0,
+                                3.0
+                            ],
+                            [
+                                5.0,
+                                10.0,
+                                3.0
+                            ],
+                            [
+                                0.0,
+                                10.0,
+                                3.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                3.0
+                            ]
+                        ]
+                    },
+                    "face_type": "RoofCeiling",
+                    "boundary_condition": {
+                        "type": "Adiabatic"
+                    }
+                }
+            ]
+        }
+    ]
+}
+}
+]
