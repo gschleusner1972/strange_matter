@@ -455,6 +455,259 @@ Currently Strange Matter itself only describes 1 component.   That is the ID com
 
 ```
 
+### Header Instance Examples
+
+## Step Geometry (~IFC Today)
+
+```json
+[
+{
+"authoring_software":"?",
+"payload_hash":"value",
+"payload_hash_definition":"na",
+"payload_data_type": "step21",
+"payload_encoding":"na",
+"payload_encryption":"na",
+"payload_data": "ISO-10303-21;
+    HEADER;
+    FILE_DESCRIPTION(('FTC-11 geometry only from the NIST MBE PMI Validation and Conformance Testing Project'),'2;1');
+    FILE_NAME('nist_ftc_11_asme1.stp','2015-05-27T17:43:57',(''),(''),'','','');
+    FILE_SCHEMA(('CONFIG_CONTROL_DESIGN'));
+    ENDSEC;
+    DATA;
+    #5=APPLICATION_CONTEXT('configuration controlled 3D designs of mechanical parts and assemblies');
+    #6=APPLICATION_PROTOCOL_DEFINITION('International Standard','ap203_configuration_controlled_3d_design_of_mechanical_parts_and_assemblies_mim_lf',2004,#5);
+    #7=PRODUCT_CONTEXT('',#5,'mechanical');
+    #8=PRODUCT('nist_ftc_11_asme1','nist_ftc_11_asme1',$,(#7));
+    #9=PRODUCT_RELATED_PRODUCT_CATEGORY('part',$,(#8));
+    #10=PRODUCT_DEFINITION_FORMATION('',$,#8);
+    #11=PRODUCT_DEFINITION_CONTEXT('part definition',#5,'design');
+    #12=PRODUCT_DEFINITION('',$,#10,#11);
+    #18=(NAMED_UNIT(*)PLANE_ANGLE_UNIT()SI_UNIT($,.RADIAN.));
+    #19=DIMENSIONAL_EXPONENTS(0.0,0.0,0.0,0.0,0.0,0.0,0.0);
+    #20=PLANE_ANGLE_MEASURE_WITH_UNIT(PLANE_ANGLE_MEASURE(0.0174532925),#18);
+    #24=(CONVERSION_BASED_UNIT('DEGREE',#20)NAMED_UNIT(#19)PLANE_ANGLE_UNIT());
+    #28=(NAMED_UNIT(*)SI_UNIT($,.STERADIAN.)SOLID_ANGLE_UNIT());
+    #32=(LENGTH_UNIT()NAMED_UNIT(*)SI_UNIT(.MILLI.,.METRE.));
+    #34=UNCERTAINTY_MEASURE_WITH_UNIT(LENGTH_MEASURE(0.01),#32,'DISTANCE_ACCURACY_VALUE','');
+    #36=(GEOMETRIC_REPRESENTATION_CONTEXT(3)GLOBAL_UNCERTAINTY_ASSIGNED_CONTEXT((#34))GLOBAL_UNIT_ASSIGNED_CONTEXT((#24,#28,#32))REPRESENTATION_CONTEXT('None','None'));
+    #37=AXIS2_PLACEMENT_3D('',#38,#39,#40);
+    #38=CARTESIAN_POINT('',(0.0,0.0,0.0));
+    #39=DIRECTION('',(0.0,0.0,1.0));
+    #40=DIRECTION('',(1.0,0.0,0.0));
+    #41=SHAPE_REPRESENTATION('',(#37),#36);
+    #42=PRODUCT_DEFINITION_SHAPE('','',#12);
+    #43=SHAPE_DEFINITION_REPRESENTATION(#42,#41);
+    #49=(NAMED_UNIT(*)PLANE_ANGLE_UNIT()SI_UNIT($,.RADIAN.));
+    #50=DIMENSIONAL_EXPONENTS(0.0,0.0,0.0,0.0,0.0,0.0,0.0);
+    #51=PLANE_ANGLE_MEASURE_WITH_UNIT(PLANE_ANGLE_MEASURE(0.0174532925),#49);
+    #55=(CONVERSION_BASED_UNIT('DEGREE',#51)NAMED_UNIT(#50)PLANE_ANGLE_UNIT());
+    #59=(NAMED_UNIT(*)SI_UNIT($,.STERADIAN.)SOLID_ANGLE_UNIT());
+    #63=(LENGTH_UNIT()NAMED_UNIT(*)SI_UNIT(.MILLI.,.METRE.));
+    #65=UNCERTAINTY_MEASURE_WITH_UNIT(LENGTH_MEASURE(0.000001),#63,'DISTANCE_ACCURACY_VALUE','');
+    #67=(GEOMETRIC_REPRESENTATION_CONTEXT(3)GLOBAL_UNCERTAINTY_ASSIGNED_CONTEXT((#65))GLOBAL_UNIT_ASSIGNED_CONTEXT((#55,#59,#63))REPRESENTATION_CONTEXT('','3D'));
+    #68=CARTESIAN_POINT('',(0.0,0.0,-0.75));
+    #69=DIRECTION('',(0.0,0.0,1.0));
+    #70=DIRECTION('',(0.0,-1.0,0.0));
+    #71=AXIS2_PLACEMENT_3D('',#68,#69,#70);
+    #72=CYLINDRICAL_SURFACE('',#71,16.0);
+    #73=CARTESIAN_POINT('',(0.0,-16.0,-1.499999999999999));
+    #74=VERTEX_POINT('',#73);
+    #75=CARTESIAN_POINT('',(0.0,0.0,-1.499999999999999));
+    #76=DIRECTION('',(0.0,0.0,1.0));
+    #77=DIRECTION('',(0.0,-1.0,0.0));
+    #78=AXIS2_PLACEMENT_3D('',#75,#76,#77);
+    #79=CIRCLE('',#78,16.0);
+    #80=EDGE_CURVE('',#74,#74,#79,.T.);
+    #81=ORIENTED_EDGE('',*,*,#80,.F.);
+    #82=EDGE_LOOP('',(#81));
+    #83=FACE_OUTER_BOUND('',#82,.T.);
+    #84=CARTESIAN_POINT('',(0.0,-16.0,0.0));
+    #85=VERTEX_POINT('',#84);
+    #86=CARTESIAN_POINT('',(0.0,0.0,0.0));
+    #87=DIRECTION('',(0.0,0.0,1.0));
+    #88=DIRECTION('',(0.0,-1.0,0.0));
+    #89=AXIS2_PLACEMENT_3D('',#86,#87,#88);
+    #90=CIRCLE('',#89,16.0);
+    #91=EDGE_CURVE('',#85,#85,#90,.T.);
+    #92=ORIENTED_EDGE('',*,*,#91,.T.);
+    #93=EDGE_LOOP('',(#92));
+    #94=FACE_BOUND('',#93,.T.);
+    #95=ADVANCED_FACE('',(#83,#94),#72,.F.);
+    #96=CARTESIAN_POINT('',(0.0,-23.75,-1.5));
+    #97=DIRECTION('',(0.0,0.0,-1.0));
+    #98=DIRECTION('',(-1.0,0.0,0.0));
+    #99=AXIS2_PLACEMENT_3D('',#96,#97,#98);
+    #100=PLANE('',#99);
+    #101=CARTESIAN_POINT('',(0.0,-31.5,-1.500000000000001));
+    #102=VERTEX_POINT('',#101);
+    #103=CARTESIAN_POINT('',(0.0,0.0,-1.500000000000001));
+    #104=DIRECTION('',(0.0,0.0,1.0));
+    #105=DIRECTION('',(0.0,-1.0,0.0));
+    #106=AXIS2_PLACEMENT_3D('',#103,#104,#105);
+    #107=CIRCLE('',#106,31.5);
+    #108=EDGE_CURVE('',#102,#102,#107,.T.);
+    #109=ORIENTED_EDGE('',*,*,#108,.F.);
+    #110=EDGE_LOOP('',(#109));
+    #111=FACE_OUTER_BOUND('',#110,.T.);
+    #112=ORIENTED_EDGE('',*,*,#80,.T.);
+    #113=EDGE_LOOP('',(#112));
+    #114=FACE_BOUND('',#113,.T.);
+    #115=ADVANCED_FACE('',(#111,#114),#100,.T.);
+    #116=CARTESIAN_POINT('',(0.0,0.0,-0.75));
+    #117=DIRECTION('',(0.0,0.0,1.0));
+    #118=DIRECTION('',(0.0,-1.0,0.0));
+    #119=AXIS2_PLACEMENT_3D('',#116,#117,#118);
+    #120=CYLINDRICAL_SURFACE('',#119,31.5);
+    #121=CARTESIAN_POINT('',(0.0,-31.5,0.0));
+    #122=VERTEX_POINT('',#121);
+    #123=CARTESIAN_POINT('',(0.0,0.0,0.0));
+    #124=DIRECTION('',(0.0,0.0,1.0));
+    #125=DIRECTION('',(0.0,-1.0,0.0));
+    #126=AXIS2_PLACEMENT_3D('',#123,#124,#125);
+    #127=CIRCLE('',#126,31.5);
+    #128=EDGE_CURVE('',#122,#122,#127,.T.);
+    #129=ORIENTED_EDGE('',*,*,#128,.F.);
+    #130=EDGE_LOOP('',(#129));
+    #131=FACE_OUTER_BOUND('',#130,.T.);
+    #132=ORIENTED_EDGE('',*,*,#108,.T.);
+    #133=EDGE_LOOP('',(#132));
+    #134=FACE_BOUND('',#133,.T.);
+    #135=ADVANCED_FACE('',(#131,#134),#120,.T.);
+    #136=CARTESIAN_POINT('',(-1.293027E-015,4.934325E-016,0.425));
+    #137=DIRECTION('',(0.0,0.0,1.0));
+    #138=DIRECTION('',(1.0,0.0,0.0));
+    #139=AXIS2_PLACEMENT_3D('',#136,#137,#138);
+    #140=PLANE('',#139);
+    #141=CARTESIAN_POINT('',(-28.561467761918419,3.497771E-015,0.425));
+    #142=VERTEX_POINT('',#141);
+    #143=CARTESIAN_POINT('',(0.0,0.0,0.425));
+    #144=DIRECTION('',(0.0,0.0,-1.0));
+    #145=DIRECTION('',(1.0,0.0,0.0));
+    #146=AXIS2_PLACEMENT_3D('',#143,#144,#145);
+    #147=CIRCLE('',#146,28.561467761918419);
+    #148=EDGE_CURVE('',#142,#142,#147,.T.);
+    #149=ORIENTED_EDGE('',*,*,#148,.F.);
+    #150=EDGE_LOOP('',(#149));
+    #151=FACE_OUTER_BOUND('',#150,.T.);
+    #152=CARTESIAN_POINT('',(-18.938532238081581,-2.319301E-015,0.425));
+    #153=VERTEX_POINT('',#152);
+    #154=CARTESIAN_POINT('',(0.0,0.0,0.425));
+    #155=DIRECTION('',(0.0,0.0,1.0));
+    #156=DIRECTION('',(1.0,0.0,0.0));
+    #157=AXIS2_PLACEMENT_3D('',#154,#155,#156);
+    #158=CIRCLE('',#157,18.938532238081581);
+    #159=EDGE_CURVE('',#153,#153,#158,.T.);
+    #160=ORIENTED_EDGE('',*,*,#159,.F.);
+    #161=EDGE_LOOP('',(#160));
+    #162=FACE_BOUND('',#161,.T.);
+    #163=ADVANCED_FACE('',(#151,#162),#140,.T.);
+    #164=CARTESIAN_POINT('',(0.0,0.0,0.0));
+    #165=DIRECTION('',(0.0,0.0,1.0));
+    #166=DIRECTION('',(1.0,0.0,0.0));
+    #167=AXIS2_PLACEMENT_3D('',#164,#165,#166);
+    #168=TOROIDAL_SURFACE('',#167,30.0,1.5);
+    #169=ORIENTED_EDGE('',*,*,#128,.T.);
+    #170=EDGE_LOOP('',(#169));
+    #171=FACE_OUTER_BOUND('',#170,.T.);
+    #172=ORIENTED_EDGE('',*,*,#148,.T.);
+    #173=EDGE_LOOP('',(#172));
+    #174=FACE_BOUND('',#173,.T.);
+    #175=ADVANCED_FACE('',(#171,#174),#168,.T.);
+    #176=CARTESIAN_POINT('',(0.0,0.0,0.0));
+    #177=DIRECTION('',(0.0,0.0,1.0));
+    #178=DIRECTION('',(1.0,0.0,0.0));
+    #179=AXIS2_PLACEMENT_3D('',#176,#177,#178);
+    #180=TOROIDAL_SURFACE('',#179,17.5,1.5);
+    #181=ORIENTED_EDGE('',*,*,#159,.T.);
+    #182=EDGE_LOOP('',(#181));
+    #183=FACE_OUTER_BOUND('',#182,.T.);
+    #184=ORIENTED_EDGE('',*,*,#91,.F.);
+    #185=EDGE_LOOP('',(#184));
+    #186=FACE_BOUND('',#185,.T.);
+    #187=ADVANCED_FACE('',(#183,#186),#180,.T.);
+    #188=CLOSED_SHELL('',(#95,#115,#135,#163,#175,#187));
+    #189=MANIFOLD_SOLID_BREP('Solid1',#188);
+    #190=COLOUR_RGB('Default(1)',0.749019622802734,0.749019622802734,0.584313750267029);
+    #191=FILL_AREA_STYLE_COLOUR('Default(1)',#190);
+    #192=FILL_AREA_STYLE('Default(1)',(#191));
+    #193=SURFACE_STYLE_FILL_AREA(#192);
+    #194=SURFACE_SIDE_STYLE('Default(1)',(#193));
+    #195=SURFACE_STYLE_USAGE(.BOTH.,#194);
+    #196=PRESENTATION_STYLE_ASSIGNMENT((#195));
+    #197=STYLED_ITEM('',(#196),#189);
+    #198=MECHANICAL_DESIGN_GEOMETRIC_PRESENTATION_REPRESENTATION('',(#197),#36);
+    #199=ADVANCED_BREP_SHAPE_REPRESENTATION('ABSR',(#189),#36);
+    #200=SHAPE_REPRESENTATION_RELATIONSHIP('SRR','None',#199,#41);
+    ENDSEC;
+    END-ISO-10303-21;"
+    ]
+}
+]
+
+```
+
+### IDS for a Slab
+
+```json
+[
+{
+"authoring_software":"?",
+"payload_hash":"value",
+"payload_hash_definition":"na",
+"payload_data_type": "xml",
+"payload_data_type_definition":"na",
+"payload_encoding":"na",
+"payload_encryption":"na",
+"payload_data": "<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS/ids_05.xsd">
+<info>
+    <title>An empty string is considered falsey and will not pass</title>
+</info>
+<specifications>
+    <specification name=""An empty string is considered falsey and will not pass" ifcVersion="IFC2X3 IFC4" minOccurs="1" maxOccurs="unbounded">
+        <applicability>
+            <entity>
+                <name>
+                    <simpleValue>IFCSLAB</simpleValue>
+                </name>
+            </entity>
+        </applicability>
+        <requirements>
+            <property datatype="IfcLogical" minOccurs="1" maxOccurs="1">
+                <propertySet>
+                    <simpleValue>Foo_Bar</simpleValue>
+                </propertySet>
+                <name>
+                    <simpleValue>Foo</simpleValue>
+                </name>
+            </property>
+        </requirements>
+    </specification>
+</specifications>
+</ids>"
+}
+]
+
+```
+
+### Site GeoJson
+
+```json
+[
+{
+"authoring_software":"FME",
+"payload_hash":"value",
+"payload_hash_definition":"na",
+"payload_data_type": "geojson",
+"payload_data_type_definition":"https://github.com/geojson/schema/blob/main/src/schema/MultiLineString.js",
+"payload_encoding":"na",
+"payload_encryption":"na",
+"payload_data": "{\"type\":\"MultiLineString\",\"coordinates\":[[[-1316.1383963,-420.5689278,0],[-1316.1383963,3779.4310722,0]],[[-1316.1383963,3779.4310722,0],[-1316.1383963,3779.4310722,-300]],[[-1316.1383963,-420.5689278,-300],[-1316.1383963,3779.4310722,-300]],[[-1316.1383963,3779.4310722,0],[6892.6695842,3779.4310722,0]],[[6892.6695842,3779.4310722,0],[6892.6695842,3779.4310722,-300]],[[-1316.1383963,3779.4310722,-300],[6892.6695842,3779.4310722,-300]],[[6892.6695842,3779.4310722,0],[6892.6695842,-420.5689278,0]],[[6892.6695842,-420.5689278,0],[6892.6695842,-420.5689278,-300]],[[6892.6695842,3779.4310722,-300],[6892.6695842,-420.5689278,-300]],[[6892.6695842,-420.5689278,0],[-1316.1383963,-420.5689278,0]],[[-1316.1383963,-420.5689278,0],[-1316.1383963,-420.5689278,-300]],[[6892.6695842,-420.5689278,-300],[-1316.1383963,-420.5689278,-300]]]}"
+}
+]
+
+```
+
 
 
 ### Payloads
@@ -463,177 +716,25 @@ Payloads is the name given to the data the Component is referencing.  This can b
 
 ### Example Instance Data of an IFC4 Floor converted to Strange Matter
 
-### Transform
 
-```jsx
-[
-    {
-        "component_version" : "00001",
-        "entity_guid" : "2XO9sNxaf0tBWBWE4fj03n",
-        "component_guid" : "b326e9b2-fd6c-4f30-a55d-2387bf199293",
-        "classification_value" : "ifcslab",
-        "name" : "Floor:Floor 1:9633",
-        "sequence_name" : "a sequence",
-        "sequence_id" : "some number",
-        "sequence_value" : "00001",
-        "context" : "hok.com/projects/123...",
-        "author" : "hok",
-        "source_data" : "C:\\+HOK\\OneDrive - HOK\\Downloads 677\\Sample_ECS_IFC.ifc",
-        "source_data_id" : "4a44f905-356d-4e5d-a413-e9034c4f6495",
-        "source_data_other" :"",
-        "classification_reference" : "URI for the Classification Reference.",
-        "component_type" : "Transform",
-        "component_type_reference" : "https://.....",
-        "version" : "1",
-        "version_id" : "4a44f905-356d-4e5d-a413-e9034c4f5493",
-        "status" : "WIP",
-        "active" : "1",
-        "author_software" : "Revit 2024",
-        "hash1" : "",
-        "payload_data_type" : "json",
-        "date_created" : "20230518095403.5713569",
-        "x" : -1316.1383962649138,
-        "y" : -420.56892778995643,
-        "z" : 0,
-        "rotation": 0,
-        "scale": 1.0
-    }
-]
-```
 
 ### Geometry
 
 Here is a sample of an IFC4,  IFC Floor converted to GeoJSON data and packaged in a “Geometry” component.  The Geometry Component Definition will most likely want to be more precise than just “Geometry,” but this is a sample. 
 
-```jsx
-[
-    {
-        "component_version" : "00001",
-        "entity_guid" : "2XO9sNxaf0tBWBWE4fj03n",
-        "component_guid" : "b326e9b2-fd6c-4f30-a55d-2387bf199291",
-        "classification_value" : "ifcslab",
-        "name" : "Floor:Floor 1:9633",
-        "sequence_name" : "a sequence",
-        "sequence_id" : "some number",
-        "sequence_value" : "00001",
-        "context" : "hok.com/projects/123...",
-        "author" : "hok",
-        "source_data" : "C:\\+HOK\\OneDrive - HOK\\Downloads 677\\Sample_ECS_IFC.ifc",
-        "source_data_id" : "4a44f905-356d-4e5d-a413-e9034c4f6495",
-        "source_data_other" :"",
-        "classification_reference" : "URI for the Classification Reference.",
-        "component_type" : "IFC_Geometry",
-        "component_type_reference" : "https://.....",
-        "version" : "1",
-        "version_id" : "4a44f905-356d-4e5d-a413-e9034c4f5493",
-        "status" : "WIP",
-        "active" : "1",
-        "author_software" : "Revit 2024",
-        "hash1" : "",
-        "payload_data_type" : "GeoJson",
-        "date_created" : "20230518095403.5713569",
-        "geometry" : "{\"type\":\"MultiLineString\",\"coordinates\":[[[-1316.1383963,-420.5689278,0],[-1316.1383963,3779.4310722,0]],[[-1316.1383963,3779.4310722,0],[-1316.1383963,3779.4310722,-300]],[[-1316.1383963,-420.5689278,-300],[-1316.1383963,3779.4310722,-300]],[[-1316.1383963,3779.4310722,0],[6892.6695842,3779.4310722,0]],[[6892.6695842,3779.4310722,0],[6892.6695842,3779.4310722,-300]],[[-1316.1383963,3779.4310722,-300],[6892.6695842,3779.4310722,-300]],[[6892.6695842,3779.4310722,0],[6892.6695842,-420.5689278,0]],[[6892.6695842,-420.5689278,0],[6892.6695842,-420.5689278,-300]],[[6892.6695842,3779.4310722,-300],[6892.6695842,-420.5689278,-300]],[[6892.6695842,-420.5689278,0],[-1316.1383963,-420.5689278,0]],[[-1316.1383963,-420.5689278,0],[-1316.1383963,-420.5689278,-300]],[[6892.6695842,-420.5689278,-300],[-1316.1383963,-420.5689278,-300]]]}"
-    }
-]
-```
+
 
 ### PSET All - Revit Values
 
 This is for demo purposes, as you’d most likely not want to package all the values into one component, but it won’t violate any rules to do so. 
 
-```jsx
-[
-    {
-        "component_version" : "00001",
-        "entity_guid" : "2XO9sNxaf0tBWBWE4fj03n",
-        "component_guid" : "b326e9b2-fd6c-4f30-a55d-2387bf199292",
-        "classification_value" : "ifcslab",
-        "name" : "Floor:Floor 1:9633",
-        "sequence_name" : "a sequence",
-        "sequence_id" : "some number",
-        "sequence_value" : "00001",
-        "context" : "hok.com/projects/123...",
-        "author" : "hok",
-        "source_data" : "C:\\+HOK\\OneDrive - HOK\\Downloads 677\\Sample_ECS_IFC.ifc",
-        "source_data_id" : "4a44f905-356d-4e5d-a413-e9034c4f6495",
-        "source_data_other" :"",
-        "classification_reference" : "URI for the Classification Reference.",
-        "component_type" : "IFC_Pset_All",
-        "component_type_reference" : "https://.....",
-        "version" : "1",
-        "version_id" : "4a44f905-356d-4e5d-a413-e9034c4f5493",
-        "status" : "WIP",
-        "active" : "1",
-        "author_software" : "Revit 2024",
-        "hash1" : "",
-        "payload_data_type" : "json",
-        "date_created" : "20230518095403.5713569",
-        "element_parent_id" : "2XO9sNxaf0tBWBWE4fj28X",
-        "element_id" : "2XO9sNxaf0tBWBWE4fj03n",
-        "GlobalId" : "2XO9sNxaf0tBWBWE4fj03n",
-        "Name" : "Floor:Floor 1:9633",
-        "ObjectType" : "Floor:Floor 1",
-        "Tag" : "9633",
-        "Constraints.Level" : "Level 1",
-        "Dimensions.Volume" : 10.34309805544262,
-        "Phasing.Phase Created" : "New Construction",
-        "multi_reader_full_id" : 0,
-        "multi_reader_id" : 0,
-        "multi_reader_keyword" : "REVIT_1",
-        "multi_reader_type" : "REVIT",
-        "Dimensions.Thickness" : "299.99999999999994",
-        "Constraints.Height Offset From Level" : 0,
-        "Constraints.Related to Mass" : false,
-        "Constraints.Room Bounding" : true,
-        "Dimensions.Area" : 34.47699351814207,
-        "Dimensions.Perimeter" : 24817.615961019987,
-        "Pset_SlabCommon.IsExternal" : false,
-        "Pset_SlabCommon.LoadBearing" : true,
-        "Pset_SlabCommon.Reference" : "Floor 1",
-        "Structural.Structural" : true,
-        "_uuid" : "b326e9b2-fd6c-4f30-a55d-2387bf199293"
-    }
-]
-```
+
 
 ### Relationship
 
 Relationships are Components just like Data Components.  Here you’ll find a relationship that states that several Entities and Components have a relationship with a building Story Entity and Its Components. 
 
-```jsx
-[
-    {
-        "component_version" : "00001",
-        "entity_guid" : "3o5x6W2EXLgWynzp6poG5Q",
-        "component_guid" : "3981eb98-92b0-4c72-849c-09ed21addc8c",
-        "classification_value" : "ifcrelationship",
-        "name" : "relationship1",
-        "sequence_name" : "a sequence",
-        "sequence_id" : "some number",
-        "sequence_value" : "00001",
-        "context" : "hok.com/projects/123...",
-        "author" : "hok",
-        "source_data" : "C:\\+HOK\\OneDrive - HOK\\Downloads 677\\Sample_ECS_IFC.ifc",
-        "source_data_id" : "6e28aba5-3195-446c-acad-3187261f78a2",
-        "classification_reference" : "URI for the Classification Reference.",
-        "component_type" : "member_of_relationship",
-        "component_type_reference" : "https://.....",
-        "version" : "1",
-        "status" : "WIP",
-        "active" : "1",
-        "author_software" : "Revit 2024",
-        "hash1" : "",
-        "payload_data_type" : "json",
-        "date_created" : "20230518095403.5000419",
-        "source_entities" : "2XO9sNxaf0tBWBWE4fj28X",
-        "source_components" : "12c5310a-fca8-434f-b36f-494754b157a4",
-        "source_component_type" : "BuildingStory",
-        "destination_entities" : "2XO9sNxaf0tBWBWF8fj06l,2XO9sNxaf0tBWBWF8fj01x,2XO9sNxaf0tBWBWF8fj3bd,2XO9sNxaf0tBWBWF8fj0Lv,2XO9sNxaf0tBWBWF8fj00m,2webN1ByIyh7t4C_D3A$H_,3Y0ZKiU6kUajwsq5fL5HF4,1nDWbUkpKJE7QGAKbUJydn,3asUQY1AQWm91Ftuc0IpE6,3o5x6W2EXLgWynzp6poG3Q,1Cn$3jXq7CO_Zbm3Dje3S$,2XO9sNxaf0tBWBWE4fj06l,2XO9sNxaf0tBWBWE4fj01x,2XO9sNxaf0tBWBWE4fj0Lv,2XO9sNxaf0tBWBWE4fj00m,2XO9sNxaf0tBWBWE4fj03n,2XO9sNxaf0tBWBWE4fj3bd,2XO9sNxaf0tBWBWE4fj1or,2XO9sNxaf0tBWBWE4fj0DN,2XO9sNxaf0tBWBWE4fj1Zf,2XO9sNxaf0tBWBWE4fj0DI,2XO9sNxaf0tBWBWE4fj0DH,2XO9sNxaf0tBWBWE4fj0DM,2XO9sNxaf0tBWBWE4fj0DK,2XO9sNxaf0tBWBWE4fj0DO,2XO9sNxaf0tBWBWE4fj0DL,2XO9sNxaf0tBWBWE4fj0DJ,2XO9sNxaf0tBWBWE4fj2xR,2XO9sNxaf0tBWBWE4fj2Y0,2XO9sNxaf0tBWBWE4fj2bj,2XO9sNxaf0tBWBWE4fj2c8,2XO9sNxaf0tBWBWE4fj2WU,2XO9sNxaf0tBWBWE4fj2hl,2XO9sNxaf0tBWBWE4fj2gH",
-        "destination_components" : "1cb6d448-9b57-48d1-8daf-b03e1c3fea86,32aedccb-4a4b-48fd-9181-0635d6cb281d,80a918b0-8c41-458a-8246-a7fce73706fd,6f72691e-716f-4623-b062-9a451f2638f4,93ec36c0-46cb-40e9-87bc-fbc951e126f9,1b9fe029-4199-40b1-b984-764c805f015c,b3248c7d-cb37-4c9f-8667-74bc0829390d,c6d53d83-1467-48c8-be92-589d18e7cfe0,00b91123-d845-48f0-bcb3-577752fa011f,3219cb50-a445-453d-bc9d-266759397fc7,c4ccb641-c1f2-4634-8c41-22af59107b31,fddf8ac6-3f7e-4f83-9e01-fc08ae1294b3,784f95f0-65cc-4a7f-98e9-c4b66de12ea5,fbfe43dc-74e2-42d7-b89f-a9d2534903b1,14663abb-4f6b-4b22-a66e-3e64fe210596,fc4a6326-e544-4270-bf0f-ced45aa8f6f4,3a123e49-92b3-4bf0-9cdc-d94aaad5403b,947c9c00-cb15-4920-81c6-b2f3ac3975b2,018b6272-03cc-42ef-aabb-6f10e4ddcaad,740e4ad2-eff4-4f22-85c0-cd5db0031114,45293a23-00f0-43ce-b426-21cc4f02b99c,1eada1c7-ca65-4c79-ace0-3e3dcd71c2a2,5515aa0d-7de6-4446-b79d-4eb00c7f0548,cf43a65f-f1e6-4fcf-ba54-366a55b932a5,d83fa667-7a69-40ad-9022-a0c186a187a9,e4f2ed71-1161-4797-8128-46a0301ff6fb,1e39e486-fde2-4e15-ac02-6a8861a2af7e,5eb3b2fb-17b6-476c-89ee-c6e1ddcff4ee,74795de6-009c-4adb-acc7-8ad268ad05fd,d5a6c071-b414-4d54-9fc4-5b07774265f3,34945e88-7045-4d53-ae29-59dfb57dfb7e,5b2a8193-d116-4461-85fd-d3232010ada8,39fca75a-6c7d-4d0e-9edb-30550a893c87,0bf7b19a-a6a7-448f-be4f-06d29a5d16c0",
-        "destination_component_type" : ""
-    }
-]
-```
+
 
 ## Collection (Formerly Container)
 
@@ -641,37 +742,7 @@ A collection does the work that files do in other systems.  But instead of conta
 
 ![Untitled](Untitled%204.png)
 
-```jsx
-[
-    {
-        "component_version" : "00001",
-        "entity_guid" : "3o5x6W2EXLgWynzp6poG53",
-        "component_guid" : "3981eb98-92b0-4c72-849c-09ed21addc8f",
-        "classification_value" : "What is the object",
-        "name" : "Collection1",
-        "sequence_name" : "a sequence",
-        "sequence_id" : "some number",
-        "sequence_value" : "00001",
-        "context" : "hok.com/projects/123...",
-        "author" : "hok",
-        "source_data" : "C:\\+HOK\\OneDrive - HOK\\Downloads 677\\Sample_ECS_IFC.ifc",
-        "source_data_id" : "6e28aba5-3195-446c-acad-3187261f78a2",
-        "classification_reference" : "URI for the Classification Reference.",
-        "component_type" : "Collection",
-        "component_type_reference" : "https://.....",
-        "version" : "1",
-        "status" : "WIP",
-        "active" : "1",
-        "author_software" : "Revit 2024",
-        "hash1" : "",
-        "payload_data_type" : "json",
-        "date_created" : "20230518095403.5000419",
-        "collection_components" : "1cb6d448-9b57-48d1-8daf-b03e1c3fea86,32aedccb-4a4b-48fd-9181-0635d6cb281d,80a918b0-8c41-458a-8246-a7fce73706fd,6f72691e-716f-4623-b062-9a451f2638f4,93ec36c0-46cb-40e9-87bc-fbc951e126f9,1b9fe029-4199-40b1-b984-764c805f015c,b3248c7d-cb37-4c9f-8667-74bc0829390d,c6d53d83-1467-48c8-be92-589d18e7cfe0,00b91123-d845-48f0-bcb3-577752fa011f,3219cb50-a445-453d-bc9d-266759397fc7,c4ccb641-c1f2-4634-8c41-22af59107b31,fddf8ac6-3f7e-4f83-9e01-fc08ae1294b3,784f95f0-65cc-4a7f-98e9-c4b66de12ea5,fbfe43dc-74e2-42d7-b89f-a9d2534903b1,14663abb-4f6b-4b22-a66e-3e64fe210596,fc4a6326-e544-4270-bf0f-ced45aa8f6f4,3a123e49-92b3-4bf0-9cdc-d94aaad5403b,947c9c00-cb15-4920-81c6-b2f3ac3975b2,018b6272-03cc-42ef-aabb-6f10e4ddcaad,740e4ad2-eff4-4f22-85c0-cd5db0031114,45293a23-00f0-43ce-b426-21cc4f02b99c,1eada1c7-ca65-4c79-ace0-3e3dcd71c2a2,5515aa0d-7de6-4446-b79d-4eb00c7f0548,cf43a65f-f1e6-4fcf-ba54-366a55b932a5,d83fa667-7a69-40ad-9022-a0c186a187a9,e4f2ed71-1161-4797-8128-46a0301ff6fb,1e39e486-fde2-4e15-ac02-6a8861a2af7e,5eb3b2fb-17b6-476c-89ee-c6e1ddcff4ee,74795de6-009c-4adb-acc7-8ad268ad05fd,d5a6c071-b414-4d54-9fc4-5b07774265f3,34945e88-7045-4d53-ae29-59dfb57dfb7e,5b2a8193-d116-4461-85fd-d3232010ada8,39fca75a-6c7d-4d0e-9edb-30550a893c87,0bf7b19a-a6a7-448f-be4f-06d29a5d16c0"
-    }
-]
-```
 
-## Scene (TBD)
 
 ![Untitled](Untitled%205.png)
 
@@ -689,6 +760,3 @@ To quickly capture and enable a history of change the system will define how Led
 
 It can be images that the raw data needs to be expressed as individual components, but for querying and fast accessing it can be imaged that the system will need a way to cache static data. 
 
-## Data Dictionaries
-
-Much like the BuildingSMART Data Dictionary today describes and identifies the definitions of parameters, Components and Archetypes will need this as well.  Given that the Components are generic and not tied to any specific data ,source, the Data Dictionary schema will also want to be data format agnostic.
