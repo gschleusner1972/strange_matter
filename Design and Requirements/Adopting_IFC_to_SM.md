@@ -1,6 +1,6 @@
 # IFC on Strange Matter
 
-Strange Matter was born out of the needs expressed by the needs of both the
+Strange Matter was born out of the needs expressed by both the
 buildingSMART community for future versions of IFC but also the large community
 around the build environment that is looking for a modern flexible way to
 connect data.
