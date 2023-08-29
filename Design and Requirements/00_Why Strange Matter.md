@@ -1,7 +1,18 @@
+# Composition
+
+At its most basic level the  design, construction and operations worlds’ data problem is that it needs to  put all kinds of data together or at least reacting to all kinds of disparate data that others provide and then make new data from it.  Those combinations are not static but need to be dynamic. 
+
+Composition is important because when looking broadly across buildings and infrastructure you see that no single entity ever creates the whole of any object or owns it all at anyone time.  
+
+![](/Users/greg/Documents/GitHub/strange_matter/Design and Requirements/media/image-20230829172825488.png)
+
+![image-20230829172857507](/Users/greg/Documents/GitHub/strange_matter/Design and Requirements/media/image-20230829172857507.png)
+
+
 
 # IFC on Strange Matter
 
-Strange Matter was born out of the needs expressed by both the
+Strange Matter was born out of the for composition  both from the
 buildingSMART community for future versions of IFC but also the large community
 around the build environment that is looking for a modern flexible way to
 connect data.
@@ -30,14 +41,13 @@ payloads, and can describe any kind of semantic relation between two components.
 A relationship between a component and entity is done by sharing a relationship
 with an Entity ID component.
 
+
+
+Sketch goes here....
+
 # Strange Matter Design Criteria
 
-Strange Matter was born from the key requirements of the industry. Chief among
-them is multiformat and multi standard support. It became clear that to reach
-this goal the protocol use to organize data had to be standard agnostic.
-
-Beyond that the actual data representation was informed by broad community input
-most of which is captured here.
+The list of criteria can seem long but it's actually very addressable if the focus is to look across topics and issues or you can arrive at something holistic. 
 
 | **Requirement**                                              | **Type**               | **Design Solution**                                          |
 | ------------------------------------------------------------ | ---------------------- | ------------------------------------------------------------ |
