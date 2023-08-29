@@ -1,0 +1,12 @@
+[
+{
+"authoring_software":"FME",
+"payload_hash":"value",
+"payload_hash_definition":"na",
+"payload_data_type": "geojson",
+"payload_data_type_definition":"https://github.com/geojson/schema/blob/main/src/schema/MultiLineString.js",
+"payload_encoding":"na",
+"payload_encryption":"na",
+"payload_data": "Components/Instance_Examples/Payload/Assets/Slab.glb"
+}
+]

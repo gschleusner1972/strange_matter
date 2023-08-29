@@ -1,0 +1,12 @@
+[
+{
+"authoring_software":"Revit",
+"payload_hash":"c3a36cf25e67373211d51455344629593c334413",
+"payload_hash_definition":"SHA1",
+"payload_data_type": "ifc",
+"payload_data_type_definition":"https://github.com/geojson/schema/blob/main/src/schema/MultiLineString.js",
+"payload_encoding":"na",
+"payload_encryption":"na",
+"payload_data": "Components/Instance_Examples/Payload/Assets/Slab.ifc"
+}
+]
