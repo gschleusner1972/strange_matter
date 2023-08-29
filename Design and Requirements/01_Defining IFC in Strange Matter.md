@@ -132,6 +132,18 @@ All the descriptive detail on the Component itself.  Its IDs, Classification. Ve
                 "@value": "<UUID7 Value for the Component>",
                 "@type": "xsd:string"
             },
+            "version": {
+                "@value": "<Human Readable Semantic Version>",
+                "@type": "xsd:string"
+            },
+            "version_id": {
+                "@value": "<UUID7 Version GUID>",
+                "@type": "xsd:string"
+            },
+            "version_increment": {
+                "@value": "<Used to track modification when using a version control system>",
+                "@type": "xsd:string"
+            },
             "date_created": {
                 "@value": "<Creation_Date_Time of the Payload>",
                 "@type": "xsd:dateTime"
@@ -164,14 +176,6 @@ All the descriptive detail on the Component itself.  Its IDs, Classification. Ve
                 "@value": "<Specific User Data Phase>",
                 "@type": "xsd:string"
             },
-            "version": {
-                "@value": "<Human Readable Semantic Version>",
-                "@type": "xsd:string"
-            },
-            "version_id": {
-                "@value": "<UUID7 Version GUID>",
-                "@type": "xsd:string"
-            },
             "status": {
                 "@value": "<WIP,Active,Other>",
                 "@type": "xsd:string"
@@ -180,6 +184,7 @@ All the descriptive detail on the Component itself.  Its IDs, Classification. Ve
                 "@value": "<Active Status Yes/No>",
                 "@type": "xsd:string"
             }
+        },
 ```
 
 ### Component Instance Payload Details and Component Instance Payload
