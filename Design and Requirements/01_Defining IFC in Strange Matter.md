@@ -1,7 +1,5 @@
 # Defining Component Defintions
 
-
-
 ## Strange Matter
 
 ## Entity
@@ -334,7 +332,9 @@ Currently Strange Matter itself only describes 1 component.   That is the ID com
           "@uuid": "a0b1c2d3-e4f5-6789-abcd-0123456789a8",
           "@classification_restriction": ["ifcwall", "wall", "ifcslab", "slab"],
           "@enum" :["1HR, 2HR, 3HR"],
-          "@localization":"Hourly Fire Rating"
+          "@localization":"Hourly Fire Rating",
+          "@native_software_id":1233456789,
+          "@native_software_name":"Rating"
       },
       "SmokeRating": {
         "@id": "http://hok.com/vocab#SmokeRating",
@@ -342,7 +342,9 @@ Currently Strange Matter itself only describes 1 component.   That is the ID com
         "@uuid": "a0b1c2d3-e4f5-6789-abcd-0123456789at",
         "@classification_restriction": ["ifcwall.partition", "wall.partition"],
         "@enum" :["1HR, 2HR, 3HR"],
-        "@localization":"Hourly Smoke Rating"
+        "@localization":"Hourly Smoke Rating",
+        "@native_software_id":1233456788,
+        "@native_software_name":"SmokeRating"
       },
       "FireSmokeRating": {
         "@id": "http://icc.com/vocab#FireSmokeRating",
@@ -350,7 +352,9 @@ Currently Strange Matter itself only describes 1 component.   That is the ID com
         "@uuid": "a0b1c2d3-e4f5-6789-abcd-01234567891b",
         "@classification_restriction": ["ifcwall.partition", "wall.partition"],
         "@enum" :["1HR, 2HR, 3HR"],
-        "@localization":"Hourly Fire/Smoke Rating"
+        "@localization":"Hourly Fire/Smoke Rating",
+        "@native_software_id":1233456787,
+        "@native_software_name":"FireSmokeRating"
       },
       "unit_time": {
           "@id": "http://example.org/vocab#length_unit",

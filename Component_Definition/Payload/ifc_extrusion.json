@@ -1,0 +1,32 @@
+{
+  "@context": {
+    "strange_matter_component_payload_definition_version":"0.1",
+    "strange_matter_version_date": "20230827",  
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "ifc_extrusion": "https://identifier.buildingsmart.org/uri/buildingsmart/ifc/5.0/geometry/extrusion",
+      "Description": "Geometry based on a Curve and Direction",
+      "geometry_curve": {
+          "@id": "https://identifier.buildingsmart.org/uri/buildingsmart/ifc/5.0/geometry/curve",
+          "@type": "xsd:float",
+          "@uuid": "a0b1c2d3-e4f5-6789-abcd-0153456789a8",
+          "@curve_definition": ["vec3","vec3","vec3","......"],
+          "@....."
+          "@classification_restriction": [],
+          "@localization":"curve"
+      },
+      "vector": {
+        "@id": "https://identifier.buildingsmart.org/uri/buildingsmart/ifc/5.0/math/vector",
+        "@type": "xsd:float",
+        "@uuid": "a0b1c2d3-e4f5-6789-abcd-0153456789a8",
+        "@vector_definition": ["123"],
+        "@classification_restriction": [],
+        "@localization":"vector"
+    },
+      "unit_length": {
+          "@id": "http://example.org/vocab#length_unit",
+          "@type": "xsd:string",
+          "@uuid": "f6a7b8c9-0123-4567-ghij-567890123ghi",
+          "@value": "millimeters"
+      }
+  }
+}
