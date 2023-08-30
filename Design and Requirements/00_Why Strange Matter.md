@@ -6,7 +6,7 @@ Composition is important because when looking broadly across buildings and infra
 
 ![](https://github.com/magnetar-io/strange_matter/blob/main/Design%20and%20Requirements/media/image-20230829172825488.png)
 
-![](Design and Requirements/media/image-20230829172857507.png)
+![](https://github.com/magnetar-io/strange_matter/blob/main/Design%20and%20Requirements/media/image-20230829172857507.png)
 
 ## Many forms.
 
