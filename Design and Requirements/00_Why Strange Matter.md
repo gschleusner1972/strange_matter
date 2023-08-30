@@ -4,9 +4,9 @@ At its most basic level the  design, construction and operations worlds’ data 
 
 Composition is important because when looking broadly across buildings and infrastructure you see that no single entity ever creates the whole of any object or owns it all at anyone time.  
 
-![](/Users/greg/Documents/GitHub/strange_matter/Design and Requirements/media/image-20230829172825488.png)
+![](https://github.com/magnetar-io/strange_matter/blob/main/Design%20and%20Requirements/media/image-20230829172825488.png)
 
-![image-20230829172857507](/Users/greg/Documents/GitHub/strange_matter/Design and Requirements/media/image-20230829172857507.png)
+![image-20230829172857507](https://github.com/magnetar-io/strange_matter/blob/main/Design%20and%20Requirements/media/image-20230829172857507.png)
 
 ## Many forms.
 
