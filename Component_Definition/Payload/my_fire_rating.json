@@ -36,7 +36,7 @@
         "@native_software_name":"FireSmokeRating"
       },
       "unit_time": {
-          "@id": "http://example.org/vocab#length_unit",
+          "@id": "http://example.org/vocab#time_unit",
           "@type": "xsd:string",
           "@uuid": "f6a7b8c9-0123-4567-ghij-567890123ghi",
           "@value": "Hours"
